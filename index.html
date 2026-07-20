@@ -893,33 +893,24 @@
       font-size: 0.88rem;
     }
 
-    /* Tabs de meses: scroll horizontal en vez de amontonarse */
+    /* Tabs de meses: fijos, se acomodan en varias lineas (sin scroll) */
     .month-tabs {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
       gap: 8px;
-      padding: 4px 20px 12px;
-      margin-left: -20px;
-      margin-right: -20px;
-      scrollbar-width: none;
     }
-    .month-tabs::-webkit-scrollbar { display: none; }
-    .month-tab { flex: 0 0 auto; scroll-snap-align: center; }
+    .month-tab { flex: 0 0 auto; }
 
-    /* Filtros de dificultad: igual, scroll horizontal */
+    /* Filtros de dificultad: igual, fijos y en varias lineas */
     .filters {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
       gap: 8px;
-      padding-bottom: 8px;
-      scrollbar-width: none;
     }
-    .filters::-webkit-scrollbar { display: none; }
     .filter-btn { flex: 0 0 auto; }
 
     /* Galería: 3 columnas era ilegible en pantalla de teléfono */
