@@ -1044,12 +1044,7 @@
   </div>
 
   <!-- Month Tabs -->
-  <div class="month-tabs">
-    <button class="month-tab active" data-month="junio" onclick="showMonth('junio', this)">Junio 2026</button>
-    <button class="month-tab" data-month="julio" onclick="showMonth('julio', this)">Julio 2026</button>
-    <button class="month-tab" data-month="agosto" onclick="showMonth('agosto', this)">Agosto 2026</button>
-    <button class="month-tab" data-month="septiembre" onclick="showMonth('septiembre', this)">Septiembre 2026</button>
-  </div>
+  <div class="month-tabs" id="month-tabs-top"></div>
 
   <!-- Filter by difficulty -->
   <div class="filters">
@@ -1059,1018 +1054,9 @@
     <button class="filter-btn" onclick="filterDiff('avanzado', this)">Avanzado</button>
   </div>
 
-  <div class="hikes-grid" id="hikes-grid">
+  <div class="hikes-grid" id="hikes-grid"></div><!-- hikes-grid -->
 
-    <!-- =========== JUNIO =========== -->
-    <div class="hike-month-group active" data-month="junio">
-
-      <div class="hike-card" data-diff="principiante" data-date="2026-06-03">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 3 de Junio</p>
-          <h3 class="hike-name">Presa Iturbide</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">4 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$800 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20sobre%20Presa%20Iturbide%20(3%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1d5W8MS4iysv18n5fmGMA9v7K8A7IFHKF/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-06-06">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cuevas de Lava" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 6 de Junio</p>
-          <h3 class="hike-name">Xitle – Cuevas de Lava</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">3.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Xitle%20Cuevas%20de%20Lava%20(6%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Qvg2LMLAplPxCLyxzFdOlKh6mxqf6IdR/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-06-10">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 10 de Junio</p>
-          <h3 class="hike-name">Desierto de los Leones</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">14 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,652 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Desierto%20de%20los%20Leones%20(10%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1MBzv53QOoz0L7A4uT7Pxxe16gbD-Ncqt/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="avanzado" data-date="2026-06-14">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-avanzado">Intermedio / Avanzado</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 14 de Junio</p>
-          <h3 class="hike-name">Monte Tláloc</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">23 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">10 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,120 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,400 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,100 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Monte%20Tlaloc%20(14%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Lnu92hcQ883OGq8dYG1-AyHBwMmsGVWj/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-06-17">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 17 de Junio</p>
-          <h3 class="hike-name">Xitle Cráter</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">4.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,100 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Xitle%20Crater%20(17%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1f4i6SVlrk6YAh4c81zh6fZw855sGWln1/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-06-20">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cuevas de Lava" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 20 de Junio</p>
-          <h3 class="hike-name">Xitle – Cuevas de Lava</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">3.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Xitle%20Cuevas%20de%20Lava%20(20%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Qvg2LMLAplPxCLyxzFdOlKh6mxqf6IdR/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-06-24">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer Senderos Iztaccíhuatl" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 24 de Junio</p>
-          <h3 class="hike-name">Amanecer en los Senderos del Iztaccíhuatl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">12 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,954 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,300 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,000 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Amanecer%20Iztaccihuatl%20(24%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1782vrczaEZnDe26FKrt62EiQAehnz91G/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-06-27">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila Amanecer" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Junio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 27 de Junio</p>
-          <h3 class="hike-name">Pico del Águila (Amanecer)</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">7 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,880 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,200 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,100 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Pico%20del%20Aguila%20(27%20Junio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1_H6fueAxItQ3fZqGMjA4mVvVOPIHZcAE/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-    </div><!-- /junio -->
-
-    <!-- =========== JULIO =========== -->
-    <div class="hike-month-group" data-month="julio">
-
-      <div class="hike-card" data-diff="avanzado" data-date="2026-07-04">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/malinche.jpeg" alt="La Malinche Cima" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-avanzado">Intermedio / Avanzado</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 4 de Julio</p>
-          <h3 class="hike-name">La Malinche (Cima)</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">15 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">9 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,461 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,800 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,600 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20La%20Malinche%20(4%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1tyCXUHTNDYCZcPzw28s5b-O_mqp8wAua/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-07-08">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 8 de Julio</p>
-          <h3 class="hike-name">Presa Iturbide</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">4 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Presa%20Iturbide%20(8%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1d5W8MS4iysv18n5fmGMA9v7K8A7IFHKF/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-07-11">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 11 de Julio</p>
-          <h3 class="hike-name">Desierto de los Leones</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">12 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,652 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Desierto%20de%20los%20Leones%20(11%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1MBzv53QOoz0L7A4uT7Pxxe16gbD-Ncqt/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-07-12">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 12 de Julio</p>
-          <h3 class="hike-name">🍄 Recolección de Hongos, Faldas del Popocatépetl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">2.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">3 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Precio por persona</span><span class="price-amount">$1,200 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Recoleccion%20de%20Hongos%20(12%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1dwJbHw6goFLuXjzXecPr8Yart6tU4wv4/view?usp=drive_link" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-07-15">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas de Lava" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 15 de Julio</p>
-          <h3 class="hike-name">Cuevas de Lava</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">3.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cuevas%20de%20Lava%20(15%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Qvg2LMLAplPxCLyxzFdOlKh6mxqf6IdR/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-07-19">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 19 de Julio</p>
-          <h3 class="hike-name">Volcanes Enanos</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">10 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">2,936 msnm</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Volcanes%20Enanos%20(19%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1ARfiCDASSXQBdscB5HmmxPqX9aQH_8r8/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-07-22">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 22 de Julio</p>
-          <h3 class="hike-name">Xitle Cráter</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">4.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,100 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Xitle%20Crater%20(22%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1f4i6SVlrk6YAh4c81zh6fZw855sGWln1/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-07-25">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/chichinautzin.jpeg" alt="Chichinautzin" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 25 de Julio</p>
-          <h3 class="hike-name">Volcán Chichinautzin</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">17 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">8 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,400 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,300 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,200 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Chichinautzin%20(25%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1-Y2z3obzX2_Dh0dhBtY_E-an3qUFuPPR/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-07-26">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero BUMI" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 26 de Julio</p>
-          <h3 class="hike-name">🥾 Mi Primer Sendero – experiencia BUMI en Senderos del Iztaccíhuatl</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">6 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,954 msnm</span></div>
-            
-          </div>
-                              <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$2,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,800 pp</span></div>
-          </div>
-                    <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Mi%20Primer%20Sendero%20BUMI%20Iztaccihuatl%20(26%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1ypDM4suMA3DZsBAxdaSlxCCOPCmns2fN/view?usp=drivesdk" target="_blank" class="btn-info">📄 Info PDF</a>
-            <a href="https://bumiwellness.wetravel.com/i/6848716ef7976111f42db49a#mi-primer-sendero" target="_blank" class="btn-reserva" style="grid-column:1/-1">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAAALDElEQVR42u2caXRU5RnH3+2+986SZLIyECABwm4CEhaRRUoEZTmAh1JZpD0CVqsiLbSnSIXjcWkVKlqPimKVCmIVVKyICi0guxDZgwHCakIiCYQtydx7360foi0kQIbmDgzpfb7ky5yZ3N887/P8n+UdeKR0FXDtyoZcBC4gF5ALyAXkAnIBuYBcQK65gFxALiAXkAvIBeQCcgG55gJyATllxPF3hBA6+4ZKqQYFSAjhyCNBACDECENCCMYIQgiUElIKIaWUNyUghKBpWtOefKmk9BRGqP6AMMKUEp/PEx8XF0xJSmsWbJXeNK1p4/i4WAABY0xKdZN5kFTq8NGiYyeKCcZOnC6ggFIKKKWUUhBCj0EbJSd27tg2p2/3nl2z4gOxts0i6lDOHzFCsEaIM4BqfwFSFZWUHiss+XTluhZpTe8dPmDk0Jy4GJ9lMzeL/ZABCMaGTinVjhcWP/vSWz9/dObmb/YaOnU6N9z8aZ4Q7DH0/IKjD/3u2UUffk41DUYA0k2vg6imMc6fnvvmwqUrdKr9fwGSSlm2bVoW59xmzDQtxnntl2GEMEJzXlm44eudjjMiUUvHZszv9Q7o2+P2rlkpyYk2swsOF67ZmJt34BDBGF0qIxBClm3/ed6irI5tPAZ1MP1HKSDLsrt27jBjysTM9hkQQSUlgHBQDpo4bviHy1e/OH9xKGRhfAkjSrW8/YdWrd0yatgA07Ia8hGzbdYjO3Pe7BmZ7TMs2zZNy7KZZdmhkEkwvn/MsNkzp1Cq1XYTCNGKf21kjDfkGCSlTAjEPvnbB+Ni/ZZt145KlVWhu/r3nDB6GGM1tY9GcH7B0ZKyU9g5FYaiL/TwwXf2btOquX1l7WdZ7GcjBgZTEsWlGhoidP5CRVHxyfoXOtELiGDUt2f21aOsECKYktipQ2t+6WmCADDOT58+hxoqIKWUYeiNUhKFFHUVxji1SVDWahsoBUzLbsgxSCkFpISgbk0sL9dUgRBoGmmwgCCEpmkXlpQiXMc/Jjg/Xlhc+yhhhOLj/FLJButBQsq1G3OvXlURgguLT+7+tkAjuIZP+byeJsEUBxsgUQeIUm3l2i279h40dP1KXqYR8s6Sz06Xn63hQUKI5qnBJsFkIRouIARhRVVo1uzXiopPegy9hithjDyG/v6yVe9/srJ22cW56NMz2+/1ONjGjkYlTTWSf/DopKlPrdmQCwHwGLqh64ahG4Z+5tyF2a8sfGrufKBUDXZSyvhA7LC7+jLhpJKO0lqMUu3Idycenv6nW29p2/3WW4KNkiybHTx8fHPursITJynVaodny7InjB2e0aKZ5Wiaj95qXiNEKZW7O3/rjjwAIQAKAKgRrOu09otNy8ru1OGB+0Y6W4hFNaDqeEw1AurSNaZltUxr+twTk2P9HttpQDd3R1EqZZpWl8z2r8+e0TIt1XE60eVBqjr3/PjnvwXWpbJaKiWllEJCBGP9voljhj868V6dahEabJAbS0RIKbhQSiGEKNUMSnWqaRrBGEMIpVJSSCkEF6K6cKca8Xk9yUkJGelNe2Rn7sw7sDe/YPX6bf16d/UaeiQY3RhAXAjOOKW0WeNgu9bp7VuntWiempKcGBfr9xqGphGEMIRQKSWlFEIIwRmXEAKqaV6P4fUalGoE42Ur1q7dtH1z7p4uWe2mPjiuR3amZTNnZ/nXGxDnXAjZvGnjnD7d+vfu3jYjPRDrxxjJahjVI9RLHxCCHzYi1I8HUSnJGDtRUrrvwGGf10AIbd+zf9K0p6c8MPb+0cO4Q8sB1xuQUsqyWZtWzcePGjrwjtuSEwNCyupxBbj2k0EIycs/VFZ+lmoEAKBTjXPx3MsLKiqqHntgDOPMKUTXCZAQgiD80C9+OmnciIRArGWzkFmvvjoEYOO2nVKK/zxCdRR7dcGSlKT4sSMHO9W3J9cn4vi9nmemPzL4zl52vdEAABCCZ89XbNuxj2BSQzdhjOa+sbhLVofWLZtddogWdTpISqlT7fmZU4YM6B0yLeFEI4IQkvdtwfGiEkxqNucxxuVnz7+x6CPg0Bg64oAY549OGD2w321VIdO5ih+tWr+VMX5ZBrpOv9qUe+jId4SQaAdkM9atU4fxowabdR0rhFCYqwcYodJT5eu3bL9SaxVBeO5C5fqtOwjB0Q4IQTRh7AiPocsrJBWEkE6pUqDs9JmqkBUOI41q6zZvLyouvcrwCyG4Y/d+IURUB2nGebuM9Nu7ZV1W4BKCCSHF35dt3rb7fEVlp45t2rZKC6d8NU3roxWrIYJX97LCE99XhUyqafXURBEExLm44/Zsv89bI20RggkmBUeOf/DJqsLik4Nyeo8cmuPzeoTgdT4Mpdrajbm78g5omnZVjujchcqqKtMIUBGdgBQAlGq3dcm8OG1hjDRNO3Ks6K/vLtvyzZ57hvR/fuK9gbhYy7Z5GCkZQshs9rf3lwshrz5chhAwzhjj9c9lEQMkZUIgrkXz1OpAACHUdVp26sw7Hyxf9OHnWR0y5s35Q/vW6ZbNwld0uk4/W7n+6+17aRhLQBBCiOBFXYEoAySEDKYkBAIxUipN04SQH69Y85f575WVnZn2yPjxo4ZgjK5JMWKMT5efffXtJWGMFIFSymPohk7rX3BECpBUsnFKskfXEYL5BcdemLfoizWbMttlLH79j12y2pmWda29UULIq28vOXjkuGHo4ajTpIR4n9db/6o1ckdMNQ4mIYTeem/ZawuWlpSeGjkkZ9a0XybGx4XMa1aMHsNYvnL93z/+8rIN6csVN7J9mxaGTutfkUUKEMKooqJq8uPPLf/nBozR1AfvmzxpNIKw9spPnWYYdPue/KfmzldAIRiWcCMY9+lxq3JiAB0pQFTTPlu1vso0fV7j8ccmjB05iDHGr33gaRj6vv2Hp8564ey5C2FuJTDG22ak9ejS0ZEJRwR1kM15XEzMM48/PHRAH9OyrzUcQAg9hr5x267pT79cUnqKamGtryoAlFITxgyP8fsc2YOJFCDORazfN2fWb/r36Xqt/Q0IIdU0y2Zvvrvslbc+qAyFwqQDAAiFzBGDfjJ0YF+n+tMkQnQCcTEvPDmtX69s07IMnQohw+mEYow0ojHONm3bPW/h0q3b92qEaGEX5aGQ2atb55lTJwHnbplF5L6Y12PMmfXrfr2yLduybfvTL79q0yq9ZVqq3+dFCCql5EWdZwghghBCyBg/WVa+dcfef6xcl7tzH2NcpzTsD5U2Y3f37/XU738VG+Pn3LEBmdPXoaTUCH5m+sM5fbqFTNPQ6WsLlr74xuK4GH+z1GCbVmmt0ps1a5KcEB/weQyMMReisjJUeqr86Hcn8g8e3X/oWOnpcgigphEa3s58NZrkxMCkcfeMHzWUYOQgHQAAdPBnAiGEFZVVu/IO9uuVzRg3dLp6Q+7kGc8rACAAQgghpFQKIUgwxhgjCKVSnIvqS4oIIUJwOPuX1RMQzoUCIJicdHf/nuNGDmqZ1tSybcfvb0LHf0eREMI5xxiXfF923yNPFJWc1AhRtZMNAAqoH4amsI7MdPG1OgShrtOUpISObVv27Zndu3vnJsEkLgTnIhLxlEQgQvPqevqTL9YZun5Lu9bgf/1WVfUFMYJ0SmN83vhAbLBRUlpqML15alpqMD4QgxBinDu71hpxD/qvDrI5xvXsWCoAAEQII0QwRjfiam8EhaKuO3kziXEOOLj+FkFAN/a+u2NFJXDNBeQCcgG5gFxALiAXkAvINReQC8gF5AJyAbmAXEAuINdcQC4gh+zfIqEs1kB1RZwAAAAASUVORK5CYII=" alt="BUMI">Reservar con BUMI
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-07-29">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Julio 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 29 de Julio</p>
-          <h3 class="hike-name">Cascada de Nexpayantla</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">13 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,246 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,000 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cascada%20Nexpayantla%20(29%20Julio)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/12rvtUjM2eRLw25MZqHllD1ALgGTF-qCG/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-    </div><!-- /julio -->
-
-    <!-- =========== AGOSTO =========== -->
-    <div class="hike-month-group" data-month="agosto">
-
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-01">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 1 de Agosto</p>
-          <h3 class="hike-name">🍄 Recolección de Hongos, Faldas del Popocatépetl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">2.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">2 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Precio por persona</span><span class="price-amount">$1,200 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Recoleccion%20de%20Hongos%20(1%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1dwJbHw6goFLuXjzXecPr8Yart6tU4wv4/view?usp=drive_link" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-02">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 2 de Agosto</p>
-          <h3 class="hike-name">Volcanes Enanos</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">10 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,046 msnm</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Volcanes%20Enanos%20(2%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1ARfiCDASSXQBdscB5HmmxPqX9aQH_8r8/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-05">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas del Xitle" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 5 de Agosto</p>
-          <h3 class="hike-name">Cuevas del Xitle</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">3.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cuevas%20del%20Xitle%20(5%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Qvg2LMLAplPxCLyxzFdOlKh6mxqf6IdR/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-08-08">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila Amanecer" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-intermedio">Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 8 de Agosto</p>
-          <h3 class="hike-name">Pico del Águila (Circuito)</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">8 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">7 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,900 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,200 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,100 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Pico%20del%20Aguila%20Circuito%20(8%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1_H6fueAxItQ3fZqGMjA4mVvVOPIHZcAE/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-15">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/yoga_soare.jpeg" alt="Yoga Soare – Amanecer Iztaccíhuatl" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 15 de Agosto</p>
-          <h3 class="hike-name">🧘 Yoga Soare – Amanecer en los senderos del Iztaccíhuatl</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">10 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,954 msnm</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Precio por persona</span><span class="price-amount">$1,500 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Yoga%20Soare%20Amanecer%20Iztaccihuatl%20(15%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/14EWWc6-HsbDqtsw36JexOSNLmtNzIOe2/view?usp=drive_link" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-15">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 15 de Agosto</p>
-          <h3 class="hike-name">🍄 Recolección de Hongos, Faldas del Popocatépetl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">2.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">2 HRS</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Precio por persona</span><span class="price-amount">$1,200 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Recoleccion%20de%20Hongos%20(15%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1dwJbHw6goFLuXjzXecPr8Yart6tU4wv4/view?usp=drive_link" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-08-19">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cruz_rosas.jpeg" alt="Cruz de Rosas" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-intermedio">Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 19 de Agosto</p>
-          <h3 class="hike-name">Cruz de Rosas</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">10 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">8 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,460 msnm</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,500 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,300 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cruz%20de%20Rosas%20(19%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1qUpZ00eAyYNM2xl-4qzCQojtON4juPOT/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="avanzado" data-date="2026-08-22">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-avanzado">Avanzado</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 22 de Agosto</p>
-          <h3 class="hike-name">Travesía Telapón – Tláloc</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">24 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">13 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,019 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,500 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,400 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Travesia%20Telapon%20Tlaloc%20(22%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1c2YWTGKnzmcPvVduPRZASJw-T_TJ1uNF/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="avanzado" data-date="2026-08-26">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-avanzado">Intermedio / Avanzado</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 26 de Agosto</p>
-          <h3 class="hike-name">Monte Tláloc</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">23 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">10 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,120 msnm</span></div>
-            
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,500 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,200 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Monte%20Tlaloc%20(26%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1Lnu92hcQ883OGq8dYG1-AyHBwMmsGVWj/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-08-29">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/campamento_paricutin.jpeg" alt="Campamento Paricutín" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Agosto 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 29 de Agosto</p>
-          <h3 class="hike-name">Campamento Paricutín</h3>
-                    <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">4 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">2,800 msnm</span></div>
-            
-          </div>
-                    <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$3,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$2,700 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Campamento%20Paricutin%20(29%20Agosto)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://drive.google.com/file/d/1RZSGvWiHmCtyhwoZrvPolGR8i5ASaOnX/view" target="_blank" class="btn-info">📄 Info PDF</a>
-          </div>
-        </div>
-      </div>
-    </div><!-- /agosto -->
-
-    <!-- =========== SEPTIEMBRE =========== -->
-    <div class="hike-month-group" data-month="septiembre">
-      <div class="hike-card" data-diff="principiante" data-date="2026-09-02">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 2 de Septiembre</p>
-          <h3 class="hike-name">Senderos del Iztaccíhuatl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">12 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,954 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,400 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,300 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Senderos%20Iztaccíhuatl%20(2%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-09-05">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/sierra_negra.jpeg" alt="Sierra Negra" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-intermedio">Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 5 de Septiembre</p>
-          <h3 class="hike-name">Sierra Negra</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,532 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$2,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Sierra%20Negra%20(5%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-09-09">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 9 de Septiembre</p>
-          <h3 class="hike-name">Volcanes Enanos</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">10 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">2,936 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Volcanes%20Enanos%20(9%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-09-13">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Domingo 13 de Septiembre</p>
-          <h3 class="hike-name">Xitle Cráter</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">4.5 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">5 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,100 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Xitle%20Cráter%20(13%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="principiante" data-date="2026-09-16">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer Iztaccíhuatl" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-principiante">Principiante</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 16 de Septiembre</p>
-          <h3 class="hike-name">Amanecer en los Senderos del Iztaccíhuatl</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">12 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,954 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,300 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,000 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Amanecer%20Iztaccíhuatl%20(16%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-09-19">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 19 de Septiembre</p>
-          <h3 class="hike-name">Cascada de Nexpayantla</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">13 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,246 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,100 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,000 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cascada%20Nexpayantla%20(19%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-09-23">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Miércoles 23 de Septiembre</p>
-          <h3 class="hike-name">Capilla de San Miguel – Desierto de los Leones</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">17 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">3,720 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,000 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$900 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Desierto%20de%20los%20Leones%20(23%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hike-card" data-diff="intermedio" data-date="2026-09-26">
-        <img class="hike-card-img" src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cofre_perote.jpeg" alt="Cofre de Perote" style="width:100%;height:220px;object-fit:cover;">
-        <div class="hike-card-top">
-          <span class="hike-month">Septiembre 2026</span>
-          <span class="difficulty-badge diff-intermedio">Principiante / Intermedio</span>
-        </div>
-        <div class="hike-card-body">
-          <p class="hike-date">Sábado 26 de Septiembre</p>
-          <h3 class="hike-name">Cofre de Perote</h3>
-          <div class="hike-stats">
-            <div class="stat"><span class="stat-label">Distancia</span><span class="stat-value">11 KM</span></div>
-            <div class="stat"><span class="stat-label">Duración</span><span class="stat-value">6 HRS</span></div>
-            <div class="stat"><span class="stat-label">Altitud</span><span class="stat-value">4,208 msnm</span></div>
-          </div>
-          <div class="hike-prices">
-            <div class="price-row"><span class="price-label">Con transporte</span><span class="price-amount">$1,900 pp</span></div>
-            <div class="price-row"><span class="price-label">Sin transporte</span><span class="price-amount">$1,800 pp</span></div>
-          </div>
-          <div class="hike-actions">
-            <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20info%20Cofre%20de%20Perote%20(26%20Sep)" target="_blank" class="btn-wa">
-              <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </div><!-- /septiembre -->
-
-
-  </div><!-- hikes-grid -->
-
-  <div class="month-tabs" style="margin-top:36px">
-    <button class="month-tab active" data-month="junio" onclick="showMonth('junio', this)">Junio 2026</button>
-    <button class="month-tab" data-month="julio" onclick="showMonth('julio', this)">Julio 2026</button>
-    <button class="month-tab" data-month="agosto" onclick="showMonth('agosto', this)">Agosto 2026</button>
-    <button class="month-tab" data-month="septiembre" onclick="showMonth('septiembre', this)">Septiembre 2026</button>
-  </div>
+  <div class="month-tabs" id="month-tabs-bottom" style="margin-top:36px"></div>
 </section>
 
 <!-- CALENDARIO VISUAL -->
@@ -2079,64 +1065,7 @@
     <span class="section-tag" style="color:#86efac">Agenda</span>
     <h2 class="section-title">CALENDARIO</h2>
   </div>
-  <div class="cal-grid">
-    <div class="cal-month">
-      <div class="cal-month-header">Junio 2026</div>
-      <div class="cal-items">
-        <div class="cal-item" data-date="2026-06-03"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 3</span><span class="cal-item-name">Presa Iturbide</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-06-06"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 6</span><span class="cal-item-name">Xitle – Cuevas de Lava</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-06-10"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 10</span><span class="cal-item-name">Desierto de los Leones</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-06-14"><span class="cal-dot dot-avanzado"></span><span class="cal-item-date">Dom 14</span><span class="cal-item-name">Monte Tláloc</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f87171;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio / Avanzado</span></div>
-        <div class="cal-item" data-date="2026-06-17"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 17</span><span class="cal-item-name">Xitle Cráter</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-06-20"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 20</span><span class="cal-item-name">Xitle – Cuevas de Lava</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-06-24"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 24</span><span class="cal-item-name">Amanecer Iztaccíhuatl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-06-27"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 27</span><span class="cal-item-name">Pico del Águila</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-      </div>
-    </div>
-    <div class="cal-month">
-      <div class="cal-month-header">Julio 2026</div>
-      <div class="cal-items">
-        <div class="cal-item" data-date="2026-07-04"><span class="cal-dot dot-avanzado"></span><span class="cal-item-date">Sáb 4</span><span class="cal-item-name">La Malinche (Cima)</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f87171;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio / Avanzado</span></div>
-        <div class="cal-item" data-date="2026-07-08"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 8</span><span class="cal-item-name">Presa Iturbide</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-07-11"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 11</span><span class="cal-item-name">Desierto de los Leones</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-07-12"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Dom 12</span><span class="cal-item-name">🍄 Hongos, Faldas del Popocatépetl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-07-15"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 15</span><span class="cal-item-name">Cuevas de Lava</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-07-19"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Dom 19</span><span class="cal-item-name">Volcanes Enanos</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-07-22"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 22</span><span class="cal-item-name">Xitle Cráter</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-07-25"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 25</span><span class="cal-item-name">Volcán Chichinautzin</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio</span></div>
-        <div class="cal-item" data-date="2026-07-26"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Dom 26</span><span class="cal-item-name">🥾 Mi Primer Sendero – BUMI</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-07-29"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 29</span><span class="cal-item-name">Cascada Nexpayantla</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-      </div>
-    </div>
-    <div class="cal-month">
-      <div class="cal-month-header">Agosto 2026</div>
-      <div class="cal-items">
-        <div class="cal-item" data-date="2026-08-01"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 1</span><span class="cal-item-name">🍄 Hongos, Faldas del Popocatépetl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-08-02"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Dom 2</span><span class="cal-item-name">Volcanes Enanos</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-08-05"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 5</span><span class="cal-item-name">Cuevas del Xitle</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-08-08"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 8</span><span class="cal-item-name">Pico del Águila (Circuito)</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio</span></div>
-        <div class="cal-item" data-date="2026-08-15"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 15</span><span class="cal-item-name">🧘 Yoga Soare – Amanecer</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-08-15"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 15</span><span class="cal-item-name">🍄 Hongos, Faldas del Popocatépetl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-08-19"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 19</span><span class="cal-item-name">Cruz de Rosas</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio</span></div>
-        <div class="cal-item" data-date="2026-08-22"><span class="cal-dot dot-avanzado"></span><span class="cal-item-date">Sáb 22</span><span class="cal-item-name">Travesía Telapón – Tláloc</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f87171;margin-left:auto;flex-shrink:0;white-space:nowrap">Avanzado</span></div>
-        <div class="cal-item" data-date="2026-08-26"><span class="cal-dot dot-avanzado"></span><span class="cal-item-date">Mié 26</span><span class="cal-item-name">Monte Tláloc</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f87171;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio / Avanzado</span></div>
-        <div class="cal-item" data-date="2026-08-29"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Sáb 29</span><span class="cal-item-name">Campamento Paricutín</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-      </div>
-    </div>
-    <div class="cal-month">
-      <div class="cal-month-header">Septiembre 2026</div>
-      <div class="cal-items">
-        <div class="cal-item" data-date="2026-09-02"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 2</span><span class="cal-item-name">Senderos del Iztaccíhuatl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-09-05"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 5</span><span class="cal-item-name">Sierra Negra</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Intermedio</span></div>
-        <div class="cal-item" data-date="2026-09-09"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 9</span><span class="cal-item-name">Volcanes Enanos</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-09-13"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Dom 13</span><span class="cal-item-name">Xitle Cráter</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-09-16"><span class="cal-dot dot-principiante"></span><span class="cal-item-date">Mié 16</span><span class="cal-item-name">Amanecer Iztaccíhuatl</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#4ade80;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante</span></div>
-        <div class="cal-item" data-date="2026-09-19"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 19</span><span class="cal-item-name">Cascada de Nexpayantla</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-09-23"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Mié 23</span><span class="cal-item-name">Capilla San Miguel – Desierto</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-        <div class="cal-item" data-date="2026-09-26"><span class="cal-dot dot-intermedio"></span><span class="cal-item-date">Sáb 26</span><span class="cal-item-name">Cofre de Perote</span><span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fbbf24;margin-left:auto;flex-shrink:0;white-space:nowrap">Principiante / Intermedio</span></div>
-      </div>
-    </div>
-  </div></div>
+  <div class="cal-grid" id="cal-grid"></div></div>
   <div style="text-align:center;margin-top:32px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
     <span style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.6);font-size:.82rem"><span style="width:10px;height:10px;background:#4ade80;border-radius:50%;display:inline-block"></span>Principiante</span>
     <span style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.6);font-size:.82rem"><span style="width:10px;height:10px;background:#fbbf24;border-radius:50%;display:inline-block"></span>Intermedio</span>
@@ -2446,60 +1375,223 @@
   resize();
   setTimeout(()=>animate(), 100);
 
+  // ── Datos de hikes desde Google Sheets (publicado como CSV) ──
+  var HIKES_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQs5pveqt5JgcYJ4ZcYwqSP2DJ2HdSrYkRVv8CXTk-5nESi77n1ty21HBngNEQ27p399deN7aOWnuU1/pub?output=csv";
+  var WHATSAPP_NUMBER = "525516995143";
+  var IMG_BASE = "https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/";
+  var WA_SVG = '<svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
+  var MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var MESES_CAP = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+  var DIAS = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  var DIAS_ABR = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+  var TIER_COLOR = { principiante: "#4ade80", intermedio: "#fbbf24", avanzado: "#f87171" };
+
+  function parseCSV(str) {
+    var rows = [], row = [], field = "", inQuotes = false;
+    for (var i = 0; i < str.length; i++) {
+      var c = str[i], next = str[i + 1];
+      if (inQuotes) {
+        if (c === '"' && next === '"') { field += '"'; i++; }
+        else if (c === '"') { inQuotes = false; }
+        else { field += c; }
+      } else {
+        if (c === '"') { inQuotes = true; }
+        else if (c === ',') { row.push(field); field = ""; }
+        else if (c === '\r') { /* skip */ }
+        else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ""; }
+        else { field += c; }
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    if (!rows.length) return [];
+    var headers = rows.shift().map(function (h) { return h.trim(); });
+    return rows
+      .filter(function (r) { return r.length > 1 || (r[0] && r[0].trim() !== ""); })
+      .map(function (r) {
+        var obj = {};
+        headers.forEach(function (h, idx) { obj[h] = (r[idx] !== undefined ? r[idx] : "").trim(); });
+        return obj;
+      });
+  }
+
+  function parseFecha(fecha) { return new Date(fecha + "T00:00:00"); }
+  function monthKey(fecha) { var d = parseFecha(fecha); return MESES[d.getMonth()] + "-" + d.getFullYear(); }
+  function monthLabel(fecha) { var d = parseFecha(fecha); return MESES_CAP[d.getMonth()] + " " + d.getFullYear(); }
+  function formatFecha(fecha) { var d = parseFecha(fecha); return DIAS[d.getDay()] + " " + d.getDate() + " de " + MESES_CAP[d.getMonth()]; }
+  function formatFechaCorta(fecha) { var d = parseFecha(fecha); return DIAS_ABR[d.getDay()] + " " + d.getDate(); }
+  function formatFechaWa(fecha) { var d = parseFecha(fecha); return d.getDate() + " " + MESES_CAP[d.getMonth()]; }
+
+  function diffTier(texto) {
+    var t = (texto || "").toLowerCase();
+    if (t.indexOf("avanzado") !== -1) return "avanzado";
+    if (t.indexOf("intermedio") !== -1) return "intermedio";
+    return "principiante";
+  }
+
+  function escapeHtml(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function escapeAttr(s) { return escapeHtml(s).replace(/"/g, "&quot;"); }
+
+  function formatMonto(m) {
+    var n = Number(m);
+    return isNaN(n) ? escapeHtml(m) : n.toLocaleString("es-MX");
+  }
+
+  function buildStat(label, value) {
+    return '<div class="stat"><span class="stat-label">' + label + '</span><span class="stat-value">' + escapeHtml(value) + '</span></div>';
+  }
+
+  function buildPriceRow(label, monto) {
+    return '<div class="price-row"><span class="price-label">' + escapeHtml(label) + '</span><span class="price-amount">$' + formatMonto(monto) + ' pp</span></div>';
+  }
+
+  function buildCard(h) {
+    var tier = diffTier(h.dificultad);
+    var imgUrl = h.imagen && h.imagen.indexOf("http") === 0 ? h.imagen : IMG_BASE + h.imagen;
+    var statsHtml = "";
+    if (h.distancia_km) statsHtml += buildStat("Distancia", h.distancia_km + " KM");
+    if (h.duracion_hrs) statsHtml += buildStat("Duración", h.duracion_hrs + " HRS");
+    if (h.altitud_msnm) statsHtml += buildStat("Altitud", formatMonto(h.altitud_msnm) + " msnm");
+
+    var pricesHtml = "";
+    if (h.precio1_label) pricesHtml += buildPriceRow(h.precio1_label, h.precio1_monto);
+    if (h.precio2_label) pricesHtml += buildPriceRow(h.precio2_label, h.precio2_monto);
+
+    var waMsg = encodeURIComponent("Hola! Quiero info sobre " + h.nombre + " (" + formatFechaWa(h.fecha) + ")");
+    var pdfBtn = h.pdf_info ? '<a href="' + escapeAttr(h.pdf_info) + '" target="_blank" class="btn-info">📄 Info PDF</a>' : "";
+
+    return (
+      '<div class="hike-card" data-diff="' + tier + '" data-date="' + h.fecha + '">' +
+        '<img class="hike-card-img" src="' + escapeAttr(imgUrl) + '" alt="' + escapeAttr(h.nombre) + '" style="width:100%;height:220px;object-fit:cover;">' +
+        '<div class="hike-card-top">' +
+          '<span class="hike-month">' + monthLabel(h.fecha) + '</span>' +
+          '<span class="difficulty-badge diff-' + tier + '">' + escapeHtml(h.dificultad) + '</span>' +
+        '</div>' +
+        '<div class="hike-card-body">' +
+          '<p class="hike-date">' + formatFecha(h.fecha) + '</p>' +
+          '<h3 class="hike-name">' + escapeHtml(h.nombre) + '</h3>' +
+          '<div class="hike-stats">' + statsHtml + '</div>' +
+          '<div class="hike-prices">' + pricesHtml + '</div>' +
+          '<div class="hike-actions">' +
+            '<a href="https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waMsg + '" target="_blank" class="btn-wa">' + WA_SVG + 'WhatsApp</a>' +
+            pdfBtn +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  function groupByMonth(hikes) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var future = hikes.filter(function (h) {
+      return h.fecha && parseFecha(h.fecha) >= today;
+    });
+    future.sort(function (a, b) { return a.fecha.localeCompare(b.fecha); });
+
+    var groups = {}, order = [];
+    future.forEach(function (h) {
+      var key = monthKey(h.fecha);
+      if (!groups[key]) { groups[key] = { label: monthLabel(h.fecha), items: [] }; order.push(key); }
+      groups[key].items.push(h);
+    });
+    return { groups: groups, order: order };
+  }
+
+  // ── Render de tarjetas + tabs de mes ──
+  function renderHikes(hikes) {
+    var grid = document.getElementById("hikes-grid");
+    var tabsTop = document.getElementById("month-tabs-top");
+    var tabsBottom = document.getElementById("month-tabs-bottom");
+    if (!grid) return;
+
+    var g = groupByMonth(hikes);
+    if (!g.order.length) {
+      grid.innerHTML = '<p style="text-align:center;color:rgba(255,255,255,0.6);padding:40px">Pronto anunciaremos nuevos hikes. ¡Síguenos para no perderte la fecha!</p>';
+      if (tabsTop) tabsTop.innerHTML = "";
+      if (tabsBottom) tabsBottom.innerHTML = "";
+      return;
+    }
+
+    var tabsHtml = g.order.map(function (key, i) {
+      return '<button class="month-tab' + (i === 0 ? ' active' : '') + '" data-month="' + key + '" onclick="showMonth(\'' + key + '\', this)">' + g.groups[key].label + '</button>';
+    }).join("");
+    if (tabsTop) tabsTop.innerHTML = tabsHtml;
+    if (tabsBottom) tabsBottom.innerHTML = tabsHtml;
+
+    grid.innerHTML = g.order.map(function (key, i) {
+      var items = g.groups[key].items.map(buildCard).join("");
+      return '<div class="hike-month-group' + (i === 0 ? ' active' : '') + '" data-month="' + key + '">' + items + '</div>';
+    }).join("");
+  }
+
+  // ── Render del calendario compacto ──
+  function renderCalendar(hikes) {
+    var calGrid = document.getElementById("cal-grid");
+    if (!calGrid) return;
+
+    var g = groupByMonth(hikes);
+    if (!g.order.length) { calGrid.innerHTML = ""; return; }
+
+    calGrid.innerHTML = g.order.map(function (key) {
+      var group = g.groups[key];
+      var itemsHtml = group.items.map(function (h) {
+        var tier = diffTier(h.dificultad);
+        var color = TIER_COLOR[tier];
+        return (
+          '<div class="cal-item" data-date="' + h.fecha + '">' +
+            '<span class="cal-dot dot-' + tier + '"></span>' +
+            '<span class="cal-item-date">' + formatFechaCorta(h.fecha) + '</span>' +
+            '<span class="cal-item-name">' + escapeHtml(h.nombre) + '</span>' +
+            '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:' + color + ';margin-left:auto;flex-shrink:0;white-space:nowrap">' + escapeHtml(h.dificultad) + '</span>' +
+          '</div>'
+        );
+      }).join("");
+      return '<div class="cal-month"><div class="cal-month-header">' + group.label + '</div><div class="cal-items">' + itemsHtml + '</div></div>';
+    }).join("");
+  }
+
   // ── Month Tab Filter ──
   function showMonth(month, btn) {
-    document.querySelectorAll('.month-tab').forEach(b => b.classList.toggle('active', b.dataset.month === month));
-    document.querySelectorAll('.hike-month-group').forEach(g => {
-      g.classList.toggle('active', g.dataset.month === month);
-    });
-    // reapply difficulty filter
-    const activeFilter = document.querySelector('.filter-btn.active');
-    if(activeFilter) {
-      const diff = activeFilter.textContent.trim().toLowerCase();
-      if(diff !== 'todos') applyDiffFilter(diff);
+    document.querySelectorAll('.month-tab').forEach(function (b) { b.classList.toggle('active', b.dataset.month === month); });
+    document.querySelectorAll('.hike-month-group').forEach(function (g) { g.classList.toggle('active', g.dataset.month === month); });
+    var activeFilter = document.querySelector('.filter-btn.active');
+    if (activeFilter) {
+      var diff = activeFilter.textContent.trim().toLowerCase();
+      if (diff !== 'todos') applyDiffFilter(diff);
     }
   }
 
   // ── Difficulty Filter ──
   function filterDiff(diff, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
     btn.classList.add('active');
     applyDiffFilter(diff);
   }
 
   function applyDiffFilter(diff) {
-    const activeGroup = document.querySelector('.hike-month-group.active');
-    if(!activeGroup) return;
-    activeGroup.querySelectorAll('.hike-card').forEach(card => {
-      if(diff === 'all' || diff === 'todos') {
-        card.style.display = '';
-      } else {
-        card.style.display = card.dataset.diff === diff ? '' : 'none';
-      }
+    var activeGroup = document.querySelector('.hike-month-group.active');
+    if (!activeGroup) return;
+    activeGroup.querySelectorAll('.hike-card').forEach(function (card) {
+      card.style.display = (diff === 'all' || diff === 'todos' || card.dataset.diff === diff) ? '' : 'none';
     });
   }
 
-  // ── Ocultar fechas que ya pasaron (según la fecha del visitante) ──
-  function hidePastHikes(){
-    const today = new Date(); today.setHours(0,0,0,0);
-    const past = ds => ds && (new Date(ds + 'T00:00:00') < today);
-    document.querySelectorAll('.hike-card[data-date]').forEach(c => { if(past(c.dataset.date)) c.style.display='none'; });
-    document.querySelectorAll('.cal-item[data-date]').forEach(it => { if(past(it.dataset.date)) it.style.display='none'; });
-    document.querySelectorAll('.cal-month').forEach(m => {
-      const items=[...m.querySelectorAll('.cal-item[data-date]')];
-      if(items.length && !items.some(it => !past(it.dataset.date))) m.style.display='none';
-    });
-    const future={};
-    document.querySelectorAll('.hike-month-group').forEach(g => {
-      const has=[...g.querySelectorAll('.hike-card[data-date]')].some(c => !past(c.dataset.date));
-      future[g.dataset.month]=has;
-      if(!has) g.style.display='none';
-    });
-    document.querySelectorAll('.month-tab').forEach(b => { if(!future[b.dataset.month]) b.style.display='none'; });
-    const firstM=['junio','julio','agosto','septiembre'].find(m => future[m]);
-    if(firstM){ const btn=document.querySelector('.month-tab[data-month="'+firstM+'"]'); if(btn) showMonth(firstM, btn); }
+  // ── Carga de datos desde Google Sheets ──
+  function loadHikesData() {
+    fetch(HIKES_CSV_URL)
+      .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.text(); })
+      .then(function (text) {
+        var hikes = parseCSV(text);
+        renderHikes(hikes);
+        renderCalendar(hikes);
+      })
+      .catch(function (err) {
+        console.error('No se pudieron cargar los hikes desde Google Sheets', err);
+        var grid = document.getElementById('hikes-grid');
+        if (grid) grid.innerHTML = '<p style="text-align:center;color:rgba(255,255,255,0.6);padding:40px">No pudimos cargar los próximos hikes en este momento. Intenta recargar la página en unos minutos.</p>';
+      });
   }
-  document.addEventListener('DOMContentLoaded', hidePastHikes);
+  document.addEventListener('DOMContentLoaded', loadHikesData);
 
 </script>
 
