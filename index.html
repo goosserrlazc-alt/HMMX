@@ -371,7 +371,7 @@
   .price-row:first-child { margin-bottom: 4px; }
 
   .price-label { color: var(--stone); }
-  .price-amount { font-weight: 700; color: var(--green); }
+  .price-amount { font-weight: 700; color: var(--orange); }
 
   .hike-actions {
     display: grid;
@@ -740,6 +740,126 @@
     font-size: 0.78rem;
     color: var(--stone);
     line-height: 1.4;
+  }
+
+  /* ── RESEÑAS ── */
+  #resenas { position: relative; z-index: 1; padding: 100px 40px; max-width: 780px; margin: 0 auto; }
+
+  .review-track { position: relative; min-height: 260px; }
+
+  .review-card {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 18px;
+    padding: 44px 48px;
+    text-align: center;
+  }
+
+  .review-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .review-stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .review-stars span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--green);
+    display: inline-block;
+  }
+
+  .review-quote {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 22px;
+  }
+
+  .review-author {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+
+  .review-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--stone);
+    text-decoration: none;
+  }
+
+  .review-source:hover { color: var(--green); }
+
+  .review-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .review-arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--dark);
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .review-arrow:hover { background: var(--dark); color: white; border-color: var(--dark); }
+
+  .review-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .review-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.15);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .review-dot.active { background: var(--green); transform: scale(1.25); }
+
+  @media (max-width: 600px) {
+    #resenas { padding: 70px 20px; }
+    .review-card { padding: 32px 24px; }
+    .review-quote { font-size: 0.95rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .review-card { transition: opacity 0.2s linear; }
+    .review-card:not(.active) { transform: none; }
   }
 
   /* ── FOOTER ── */
@@ -1187,6 +1307,102 @@
   </div>
 </section>
 
+<!-- RESEÑAS -->
+<section id="resenas">
+  <div class="section-header">
+    <span class="section-tag">Lo que dicen al bajar</span>
+    <h2 class="section-title">RESEÑAS</h2>
+  </div>
+
+  <div class="review-track" id="review-track"></div>
+
+  <div class="review-controls">
+    <button class="review-arrow" id="review-prev" aria-label="Reseña anterior">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="review-dots" id="review-dots"></div>
+    <button class="review-arrow" id="review-next" aria-label="Siguiente reseña">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</section>
+
+<script>
+(function () {
+  "use strict";
+
+  var TRIPADVISOR_URL = "https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html";
+
+  var REVIEWS = [
+    { autor: "Ernesto P.", texto: "Una experiencia inolvidable. Desde que comenzamos a subir el Ajusco, con el camino iluminado por la luna, hasta que llegamos a la cima a ver el amanecer, toda la experiencia fue mágica. No hubiera sido igual sin los amables y capaces guías de Hiking…" },
+    { autor: "Violeta T.", texto: "Los guías son de las mejores personas que puedes encontrar en la vida. Tienen siempre buena vibra y hacen cada experiencia increíble, incluso si vas sola. Si quieres iniciar en la montaña, Gus y Lilo son las personas indicadas." },
+    { autor: "Constance V.", texto: "Increíble experiencia. Los guías son super atentos, excelentes personas y con la mejor actitud. Fui sola pero me sentí acompañada durante toda la experiencia. Fue mi primer hike con ellos y sin duda volveré a las montañas con Lilo y Gus. Los recomiendo." },
+    { autor: "Grecia Marlem P.", texto: "Ya he ido varias veces con esta agencia y para empezar súper buena onda y súper agradables los dos guías. Pero lo que los hace excelentes es lo preparados que van, con botiquín, con aguas y equipo extra, además lo compresivos y amables qu…" },
+    { autor: "mrubiosan", texto: "Super profesionales! Muy bien organizado. Perfecto para principiantes, nos llevaron de la mano y nos hicieron sentir seguros todo el tiempo. Pura buena onda. Fuimos a las cuevas del Xitle. Es un un lugar mágico!" },
+    { autor: "Rodrigo R.", texto: "Un gusto dejarme guiar y acompañar por Lilo y Gus en el camino de la montaña, siempre muy atentos y dispuestos a compartir sus conocimientos. La experiencia en grupo también fue muy gratificante todas personas amable y…" }
+  ];
+
+  var track = document.getElementById("review-track");
+  var dotsWrap = document.getElementById("review-dots");
+  if (!track || !dotsWrap) return;
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  var stars = '<div class="review-stars">' + "<span></span>".repeat(5) + "</div>";
+
+  track.innerHTML = REVIEWS.map(function (r, i) {
+    return (
+      '<div class="review-card' + (i === 0 ? " active" : "") + '" data-index="' + i + '">' +
+        stars +
+        '<p class="review-quote">“' + escapeHtml(r.texto) + '”</p>' +
+        '<p class="review-author">' + escapeHtml(r.autor) + "</p>" +
+        '<a class="review-source" href="' + TRIPADVISOR_URL + '" target="_blank" rel="noopener">⭐ vía TripAdvisor</a>' +
+      "</div>"
+    );
+  }).join("");
+
+  dotsWrap.innerHTML = REVIEWS.map(function (_, i) {
+    return '<button class="review-dot' + (i === 0 ? " active" : "") + '" data-index="' + i + '" aria-label="Ver reseña ' + (i + 1) + '"></button>';
+  }).join("");
+
+  var cards = track.querySelectorAll(".review-card");
+  var dots = dotsWrap.querySelectorAll(".review-dot");
+  var current = 0;
+  var timer = null;
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(index) {
+    current = (index + REVIEWS.length) % REVIEWS.length;
+    cards.forEach(function (c, i) { c.classList.toggle("active", i === current); });
+    dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
+  }
+
+  function next() { show(current + 1); }
+  function prev() { show(current - 1); }
+
+  function startAuto() {
+    if (prefersReduced) return;
+    stopAuto();
+    timer = setInterval(next, 6000);
+  }
+  function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+
+  document.getElementById("review-next").addEventListener("click", function () { next(); startAuto(); });
+  document.getElementById("review-prev").addEventListener("click", function () { prev(); startAuto(); });
+  dots.forEach(function (d) {
+    d.addEventListener("click", function () { show(parseInt(d.dataset.index, 10)); startAuto(); });
+  });
+
+  var section = document.getElementById("resenas");
+  section.addEventListener("mouseenter", stopAuto);
+  section.addEventListener("mouseleave", startAuto);
+
+  show(0);
+  startAuto();
+})();
+</script>
 
 <!-- RECURSOS -->
 <section id="recursos" style="position:relative;z-index:1;background:#f8f8f8;padding:80px 40px;">
