@@ -116,7 +116,7 @@
 
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4rem, 12vw, 10rem);
+    font-size: clamp(3.3rem, 10vw, 8.2rem);
     line-height: 0.95;
     color: var(--green);
     letter-spacing: 0.02em;
@@ -745,6 +745,104 @@
   /* ── RESEÑAS ── */
   #resenas { position: relative; z-index: 1; padding: 100px 40px; max-width: 780px; margin: 0 auto; }
 
+  /* ── GALERÍA SLIDER ── */
+  .gal-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .gal-viewport { overflow: hidden; flex: 1; border-radius: 12px; }
+  .gal-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+  }
+  .gal-slide {
+    position: relative;
+    flex: 0 0 calc((100% - 24px) / 3);
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .gal-slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .gal-slide figcaption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 18px 12px 9px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0,0,0,0.72));
+    letter-spacing: 0.02em;
+  }
+  .gal-arrow {
+    width: 42px; height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.92);
+    color: var(--dark);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .gal-arrow:hover { background: var(--green); color: #fff; }
+  .gal-dots {
+    display: flex; justify-content: center; gap: 7px;
+    margin-top: 20px;
+  }
+  .gal-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    border: none; padding: 0; cursor: pointer;
+    background: rgba(255,255,255,0.28);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .gal-dot.active { background: var(--green); transform: scale(1.3); }
+  @media (max-width: 860px) {
+    .gal-slide { flex: 0 0 calc((100% - 12px) / 2); }
+    .gal-slide img { height: 190px; }
+  }
+  @media (max-width: 560px) {
+    .gal-slide { flex: 0 0 100%; }
+    .gal-slide img { height: 240px; }
+    .gal-arrow { width: 36px; height: 36px; }
+  }
+
+  /* ── TEAM BUILDING ── */
+  #team-building { position: relative; z-index: 1; padding: 72px 40px; background: #f4f6f2; }
+  .tb-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .tb-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #e5e7e2;
+  }
+  .tb-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .tb-item:hover img { transform: scale(1.06); }
+  @media (max-width: 760px) { .tb-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) { .tb-grid { grid-template-columns: 1fr; } #team-building { padding: 56px 20px; } }
+
   .review-track { position: relative; min-height: 260px; }
 
   .review-card {
@@ -767,20 +865,66 @@
     pointer-events: auto;
   }
 
+  .review-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: -8px auto 34px;
+    text-align: center;
+  }
+  .review-summary .rs-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--dark);
+    letter-spacing: 0.02em;
+  }
+  .review-summary .rs-stars {
+    color: #f5a623;
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+  }
+  .review-summary .rs-meta {
+    font-size: 0.85rem;
+    color: var(--stone);
+    font-weight: 600;
+  }
+  .review-cta {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .review-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 20px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.5px solid rgba(0,0,0,0.12);
+    color: var(--dark);
+    background: #fff;
+    transition: all 0.2s;
+  }
+  .review-cta a:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+  .review-cta a.rc-google:hover { background: #4285F4; border-color: #4285F4; }
+
   .review-stars {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
     margin-bottom: 20px;
+    color: #f5a623;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
   }
 
-  .review-stars span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--green);
-    display: inline-block;
-  }
+  .review-stars span { display: inline-block; }
 
   .review-quote {
     font-size: 1.05rem;
@@ -1093,68 +1237,108 @@
 
 
 <!-- GALERÍA -->
-<section id="galeria" style="position:relative;z-index:1;padding:80px 40px;background:rgba(17,20,16,0.75)">
+<section id="galeria" style="position:relative;z-index:1;padding:52px 40px;background:rgba(17,20,16,0.75)">
   <div class="section-header">
     <span class="section-tag" style="color:#86efac">Nuestras experiencias</span>
     <h2 class="section-title" style="color:white">GALERÍA</h2>
   </div>
-  <div style="columns:3;column-gap:12px;max-width:1200px;margin:0 auto">
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila (Circuito)" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+  <div class="gal-slider" id="gal-slider">
+      <button class="gal-arrow gal-prev" id="gal-prev" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="gal-viewport">
+        <div class="gal-track" id="gal-track">
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila (Circuito)" loading="lazy"><figcaption>Pico del Águila (Circuito)</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer en los Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Amanecer en los Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero" loading="lazy"><figcaption>Mi Primer Sendero</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" loading="lazy"><figcaption>Cascada de Nexpayantla</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" loading="lazy"><figcaption>Xitle Cráter</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/chichinautzin.jpeg" alt="Chichinautzin" loading="lazy"><figcaption>Chichinautzin</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cruz_rosas.jpeg" alt="Cruz de Rosas" loading="lazy"><figcaption>Cruz de Rosas</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" loading="lazy"><figcaption>Travesía Telapón – Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cofre_perote.jpeg" alt="Cofre de Perote" loading="lazy"><figcaption>Cofre de Perote</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/campamento_paricutin.jpeg" alt="Campamento Paricutín" loading="lazy"><figcaption>Campamento Paricutín</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" loading="lazy"><figcaption>Presa Iturbide</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos, Faldas del Popocatépetl" loading="lazy"><figcaption>Recolección de Hongos, Faldas del Popocatépetl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" loading="lazy"><figcaption>Desierto de los Leones</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" loading="lazy"><figcaption>Monte Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas de Lava" loading="lazy"><figcaption>Cuevas de Lava</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" loading="lazy"><figcaption>Volcanes Enanos</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/malinche.jpeg" alt="La Malinche (Cima)" loading="lazy"><figcaption>La Malinche (Cima)</figcaption></figure>
+        </div>
+      </div>
+      <button class="gal-arrow gal-next" id="gal-next" aria-label="Siguiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer en los Senderos del Iztaccíhuatl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/chichinautzin.jpeg" alt="Chichinautzin" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cruz_rosas.jpeg" alt="Cruz de Rosas" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cofre_perote.jpeg" alt="Cofre de Perote" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/campamento_paricutin.jpeg" alt="Campamento Paricutín" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos, Faldas del Popocatépetl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas de Lava" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/malinche.jpeg" alt="La Malinche (Cima)" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-  </div>
-</section>
+    <div class="gal-dots" id="gal-dots"></div>
+  </section>
+
+<script>
+(function () {
+  "use strict";
+  var track = document.getElementById("gal-track");
+  var dotsWrap = document.getElementById("gal-dots");
+  var prevBtn = document.getElementById("gal-prev");
+  var nextBtn = document.getElementById("gal-next");
+  if (!track || !dotsWrap) return;
+
+  var slides = track.querySelectorAll(".gal-slide");
+  var total = slides.length;
+
+  function perView() {
+    if (window.matchMedia("(max-width:560px)").matches) return 1;
+    if (window.matchMedia("(max-width:860px)").matches) return 2;
+    return 3;
+  }
+
+  var pos = 0;
+  var timer = null;
+  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function maxPos() { return Math.max(0, total - perView()); }
+
+  function render() {
+    var pv = perView();
+    if (pos > maxPos()) pos = maxPos();
+    var slideW = slides[0].getBoundingClientRect().width;
+    var gap = 12;
+    track.style.transform = "translateX(-" + (pos * (slideW + gap)) + "px)";
+    var pages = maxPos() + 1;
+    if (dotsWrap.children.length !== pages) {
+      dotsWrap.innerHTML = "";
+      for (var i = 0; i < pages; i++) {
+        var b = document.createElement("button");
+        b.className = "gal-dot";
+        b.setAttribute("aria-label", "Ir a imagen " + (i + 1));
+        (function (idx) { b.addEventListener("click", function () { pos = idx; render(); restart(); }); })(i);
+        dotsWrap.appendChild(b);
+      }
+    }
+    for (var j = 0; j < dotsWrap.children.length; j++) {
+      dotsWrap.children[j].classList.toggle("active", j === pos);
+    }
+  }
+
+  function next() { pos = pos >= maxPos() ? 0 : pos + 1; render(); }
+  function prev() { pos = pos <= 0 ? maxPos() : pos - 1; render(); }
+  function start() { if (prefersReduced) return; stop(); timer = setInterval(next, 4500); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function restart() { start(); }
+
+  nextBtn.addEventListener("click", function () { next(); restart(); });
+  prevBtn.addEventListener("click", function () { prev(); restart(); });
+
+  var slider = document.getElementById("gal-slider");
+  slider.addEventListener("mouseenter", stop);
+  slider.addEventListener("mouseleave", start);
+  window.addEventListener("resize", render);
+
+  render();
+  start();
+})();
+</script>
 
 <!-- HIKES PROGRAMADOS -->
 <section id="hikes">
@@ -1251,6 +1435,26 @@
   </div>
 </section>
 
+<!-- TEAM BUILDING -->
+<section id="team-building">
+  <div class="section-header">
+    <span class="section-tag" style="color:#2f6b3a">Experiencias para equipos</span>
+    <h2 class="section-title">TEAM BUILDING</h2>
+  </div>
+  <p style="text-align:center;max-width:640px;margin:0 auto 40px;color:#4b5548;font-size:1rem;line-height:1.6">Momentos reales de equipos que fortalecieron su confianza y colaboración en la montaña.</p>
+  <div class="tb-grid">
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-01.jpg" alt="Team Building Hiking Mountain MX 01" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-02.jpg" alt="Team Building Hiking Mountain MX 02" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-03.jpg" alt="Team Building Hiking Mountain MX 03" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-04.jpg" alt="Team Building Hiking Mountain MX 04" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-05.jpg" alt="Team Building Hiking Mountain MX 05" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-06.jpg" alt="Team Building Hiking Mountain MX 06" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-07.jpg" alt="Team Building Hiking Mountain MX 07" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-08.jpg" alt="Team Building Hiking Mountain MX 08" loading="lazy"></figure>
+      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-09.jpg" alt="Team Building Hiking Mountain MX 09" loading="lazy"></figure>
+  </div>
+</section>
+
 <!-- NOSOTROS + SEGURIDAD -->
 <section id="nosotros">
   <div>
@@ -1314,6 +1518,12 @@
     <h2 class="section-title">RESEÑAS</h2>
   </div>
 
+  <div class="review-summary">
+    <span class="rs-score">5.0</span>
+    <span class="rs-stars">★★★★★</span>
+    <span class="rs-meta">Calificación en Google &amp; TripAdvisor</span>
+  </div>
+
   <div class="review-track" id="review-track"></div>
 
   <div class="review-controls">
@@ -1325,6 +1535,11 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
     </button>
   </div>
+
+  <div class="review-cta">
+    <a class="rc-google" href="https://g.page/r/CSFTl_RKK3G_EBI/review" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v2h5.5c-.2 1.3-1.6 3.9-5.5 3.9-3.3 0-6-2.7-6-6s2.7-6 6-6c1.9 0 3.1.8 3.9 1.5l1.5-1.5C16.6 3.3 14.6 2.4 12 2.4 6.9 2.4 2.9 6.5 2.9 11.6S6.9 20.8 12 20.8c5.2 0 8.6-3.6 8.6-8.7 0-.6-.1-1-.1-1.5H12z"/></svg> Ver reseñas en Google</a>
+    <a class="rc-ta" href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">Ver en TripAdvisor</a>
+  </div>
 </section>
 
 <script>
@@ -1332,14 +1547,22 @@
   "use strict";
 
   var TRIPADVISOR_URL = "https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html";
+  var GOOGLE_URL = "https://g.page/r/CSFTl_RKK3G_EBI/review";
+  var SOURCES = { TripAdvisor: TRIPADVISOR_URL, Google: GOOGLE_URL };
 
   var REVIEWS = [
-    { autor: "Ernesto P.", texto: "Una experiencia inolvidable. Desde que comenzamos a subir el Ajusco, con el camino iluminado por la luna, hasta que llegamos a la cima a ver el amanecer, toda la experiencia fue mágica. No hubiera sido igual sin los amables y capaces guías de Hiking…" },
-    { autor: "Violeta T.", texto: "Los guías son de las mejores personas que puedes encontrar en la vida. Tienen siempre buena vibra y hacen cada experiencia increíble, incluso si vas sola. Si quieres iniciar en la montaña, Gus y Lilo son las personas indicadas." },
-    { autor: "Constance V.", texto: "Increíble experiencia. Los guías son super atentos, excelentes personas y con la mejor actitud. Fui sola pero me sentí acompañada durante toda la experiencia. Fue mi primer hike con ellos y sin duda volveré a las montañas con Lilo y Gus. Los recomiendo." },
-    { autor: "Grecia Marlem P.", texto: "Ya he ido varias veces con esta agencia y para empezar súper buena onda y súper agradables los dos guías. Pero lo que los hace excelentes es lo preparados que van, con botiquín, con aguas y equipo extra, además lo compresivos y amables qu…" },
-    { autor: "mrubiosan", texto: "Super profesionales! Muy bien organizado. Perfecto para principiantes, nos llevaron de la mano y nos hicieron sentir seguros todo el tiempo. Pura buena onda. Fuimos a las cuevas del Xitle. Es un un lugar mágico!" },
-    { autor: "Rodrigo R.", texto: "Un gusto dejarme guiar y acompañar por Lilo y Gus en el camino de la montaña, siempre muy atentos y dispuestos a compartir sus conocimientos. La experiencia en grupo también fue muy gratificante todas personas amable y…" }
+    { autor: "Raziel Gabriela Moreno", texto: "Excelente servicio, muy amables y comprometidos, lo recomiendo mil!", rating: 5, fuente: "Google" },
+    { autor: "Jeffrey M.", texto: "Hice una caminata con Hiking Mountain México en la zona del volcán fuera de la Ciudad de México. ¡Fue espectacular! Éramos siete, y Gus nos mantuvo todos juntos y en el camino mientras era un excelente compañero de senderismo. Definitivamente haría otra caminata con Hiking Mountain México y estoy planeando ir con ellos en mi próxima visita a la Ciudad de México.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Sharon M.", texto: "Me gustó mucho la atención por parte de Gustavo. Desde que me brindó la info, la salida y el regreso. Una experiencia muy bella: la vista, la caminata, las fotos, la comida después.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Constance V.", texto: "Increíble experiencia. Los guías son super atentos, excelentes personas y con la mejor actitud. Fui sola pero me sentí acompañada durante toda la experiencia. Fue mi primer hike con ellos y sin duda volveré a las montañas con Lilo y Gus. Los recomiendo.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Giselle M.", texto: "Excelente team en hiking mountain, voy iniciando en este tipo de actividades y me he sentido siempre 100% guiada y cuidada, son expertos en lo que hacen, muy pacientes y de verdad te ayudan a lograr las rutas siempre priorizando tu seguridad y salud. Sin duda los recomiendo 100%.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Nan P.", texto: "Excelentes guías Lilo y Gus. Lugar hermoso para recorrer si inicias en el senderismo. Las vistas son espectaculares todo el camino.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Rodrigo R.", texto: "Un gusto dejarme guiar y acompañar por Lilo y Gus en el camino de la montaña, siempre muy atentos y dispuestos a compartir sus conocimientos. La experiencia en grupo también fue muy gratificante, todas personas amables y colaborativas. Experiencia ampliamente recomendada :)", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Paulina C.", texto: "He hecho varios hikes con ellos y siempre regreso. Lilo y Gus son increíbles, te acompañan y guían en todo momento. Súper recomendado.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Ernesto P.", texto: "Una experiencia inolvidable. Desde que comenzamos a subir el Ajusco, con el camino iluminado por la luna, hasta que llegamos a la cima a ver el amanecer, toda la experiencia fue mágica. No hubiera sido igual sin los amables y capaces guías de Hiking Mountain que siempre están al pie del cañón.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Grecia Marlem P.", texto: "Ya he ido varias veces con esta agencia y para empezar súper buena onda y súper agradables los dos guías. Pero lo que los hace excelentes es lo preparados que van: con botiquín, aguas y equipo extra, además lo comprensivos y amables que son con todos los niveles de “hikers”. Te acompañan en todo momento, así vayas lento se van esperando; te hacen sentir tan cómodo que vuelves con ellos 100%.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "Violeta T.", texto: "Los guías son de las mejores personas que puedes encontrar en la vida. Tienen siempre buena vibra y hacen cada experiencia increíble, incluso si vas sola. Si quieres iniciar en la montaña, Gus y Lilo son las personas indicadas.", rating: 5, fuente: "TripAdvisor" },
+    { autor: "mrubiosan", texto: "¡Super profesionales! Muy bien organizado. Perfecto para principiantes, nos llevaron de la mano y nos hicieron sentir seguros todo el tiempo. Pura buena onda. Fuimos a las cuevas del Xitle. ¡Es un lugar mágico!", rating: 5, fuente: "TripAdvisor" },
   ];
 
   var track = document.getElementById("review-track");
@@ -1350,15 +1573,22 @@
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  var stars = '<div class="review-stars">' + "<span></span>".repeat(5) + "</div>";
+  function starsHtml(n) {
+    n = n || 5;
+    var out = "";
+    for (var k = 0; k < 5; k++) { out += "<span>" + (k < n ? "\u2605" : "\u2606") + "</span>"; }
+    return '<div class="review-stars" aria-label="' + n + ' de 5 estrellas">' + out + "</div>";
+  }
 
   track.innerHTML = REVIEWS.map(function (r, i) {
+    var fuente = r.fuente || "TripAdvisor";
+    var url = SOURCES[fuente] || TRIPADVISOR_URL;
     return (
       '<div class="review-card' + (i === 0 ? " active" : "") + '" data-index="' + i + '">' +
-        stars +
+        starsHtml(r.rating || 5) +
         '<p class="review-quote">“' + escapeHtml(r.texto) + '”</p>' +
         '<p class="review-author">' + escapeHtml(r.autor) + "</p>" +
-        '<a class="review-source" href="' + TRIPADVISOR_URL + '" target="_blank" rel="noopener">⭐ vía TripAdvisor</a>' +
+        '<a class="review-source" href="' + url + '" target="_blank" rel="noopener">⭐ vía ' + escapeHtml(fuente) + '</a>' +
       "</div>"
     );
   }).join("");
@@ -1500,7 +1730,7 @@
     <a href="https://www.instagram.com/hiking_mountain_mx" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@hiking_mountain_mx" target="_blank">TikTok</a>
     <a href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank">TripAdvisor</a>
-    <a href="https://wa.me/525516995143" target="_blank">WhatsApp: +52 55 1699 5143</a>
+    <a href="https://wa.me/525516995143" target="_blank">WhatsApp</a>
   </div>
   <p>© 2026 Hiking Mountain MX. Todos los derechos reservados.</p>
 </footer>
