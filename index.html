@@ -1338,8 +1338,15 @@
     render();
     start();
   }
-  var carousels = document.querySelectorAll(".gal-carousel");
-  for (var k = 0; k < carousels.length; k++) setup(carousels[k]);
+  function initAll() {
+    var carousels = document.querySelectorAll(".gal-carousel");
+    for (var k = 0; k < carousels.length; k++) setup(carousels[k]);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAll);
+  } else {
+    initAll();
+  }
 })();
 </script>
 
