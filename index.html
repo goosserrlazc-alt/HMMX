@@ -836,6 +836,32 @@
     line-height: 1.6;
   }
 
+  .review-track {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+  }
+
+  .review-card {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 18px;
+    padding: 40px 44px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .review-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
   .review-summary {
     display: flex;
     flex-direction: column;
