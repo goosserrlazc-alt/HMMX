@@ -817,52 +817,23 @@
     .gal-arrow { width: 36px; height: 36px; }
   }
 
-  /* ── TEAM BUILDING ── */
-  #team-building { position: relative; z-index: 1; padding: 72px 40px; background: #f4f6f2; }
-  .tb-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .tb-item {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: #e5e7e2;
-  }
-  .tb-item img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  .tb-item:hover img { transform: scale(1.06); }
-  @media (max-width: 760px) { .tb-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 460px) { .tb-grid { grid-template-columns: 1fr; } #team-building { padding: 56px 20px; } }
-
-  .review-track { position: relative; min-height: 260px; }
-
-  .review-card {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
-    background: white;
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 18px;
-    padding: 44px 48px;
+  /* ── GALERÍA TEAM BUILDING (dentro de Corporativo) ── */
+  .corp-gallery { max-width: 1100px; margin: 56px auto 0; }
+  .corp-gallery-title {
     text-align: center;
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px;
   }
-
-  .review-card.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  .corp-gallery-sub {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 26px;
+    color: rgba(255,255,255,0.72);
+    font-size: 0.98rem;
+    line-height: 1.6;
   }
 
   .review-summary {
@@ -1242,6 +1213,7 @@
     <span class="section-tag" style="color:#86efac">Nuestras experiencias</span>
     <h2 class="section-title" style="color:white">GALERÍA</h2>
   </div>
+  <div class="gal-carousel">
   <div class="gal-slider" id="gal-slider">
       <button class="gal-arrow gal-prev" id="gal-prev" aria-label="Anterior">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
@@ -1273,70 +1245,75 @@
       </button>
     </div>
     <div class="gal-dots" id="gal-dots"></div>
-  </section>
+  </div>
+</section>
 
 <script>
 (function () {
   "use strict";
-  var track = document.getElementById("gal-track");
-  var dotsWrap = document.getElementById("gal-dots");
-  var prevBtn = document.getElementById("gal-prev");
-  var nextBtn = document.getElementById("gal-next");
-  if (!track || !dotsWrap) return;
-
-  var slides = track.querySelectorAll(".gal-slide");
-  var total = slides.length;
-
   function perView() {
     if (window.matchMedia("(max-width:560px)").matches) return 1;
     if (window.matchMedia("(max-width:860px)").matches) return 2;
     return 3;
   }
+  function setup(root) {
+    var track = root.querySelector(".gal-track");
+    var dotsWrap = root.querySelector(".gal-dots");
+    var prevBtn = root.querySelector(".gal-prev");
+    var nextBtn = root.querySelector(".gal-next");
+    var slider = root.querySelector(".gal-slider");
+    if (!track || !dotsWrap) return;
+    var slides = track.querySelectorAll(".gal-slide");
+    var total = slides.length;
+    if (!total) return;
+    var pos = 0, timer = null;
+    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var pos = 0;
-  var timer = null;
-  var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function pages() { return Math.max(1, Math.ceil(total / perView())); }
 
-  function maxPos() { return Math.max(0, total - perView()); }
-
-  function render() {
-    var pv = perView();
-    if (pos > maxPos()) pos = maxPos();
-    var slideW = slides[0].getBoundingClientRect().width;
-    var gap = 12;
-    track.style.transform = "translateX(-" + (pos * (slideW + gap)) + "px)";
-    var pages = maxPos() + 1;
-    if (dotsWrap.children.length !== pages) {
-      dotsWrap.innerHTML = "";
-      for (var i = 0; i < pages; i++) {
-        var b = document.createElement("button");
-        b.className = "gal-dot";
-        b.setAttribute("aria-label", "Ir a imagen " + (i + 1));
-        (function (idx) { b.addEventListener("click", function () { pos = idx; render(); restart(); }); })(i);
-        dotsWrap.appendChild(b);
+    function render() {
+      var pv = perView();
+      var np = pages();
+      if (pos > np - 1) pos = np - 1;
+      var slideW = slides[0].getBoundingClientRect().width;
+      var gap = 12;
+      var startIndex = pos * pv;
+      var maxIndex = Math.max(0, total - pv);
+      if (startIndex > maxIndex) startIndex = maxIndex;
+      track.style.transform = "translateX(-" + (startIndex * (slideW + gap)) + "px)";
+      if (dotsWrap.children.length !== np) {
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < np; i++) {
+          var b = document.createElement("button");
+          b.className = "gal-dot";
+          b.setAttribute("aria-label", "Ir al grupo " + (i + 1));
+          (function (idx) { b.addEventListener("click", function () { pos = idx; render(); restart(); }); })(i);
+          dotsWrap.appendChild(b);
+        }
+      }
+      for (var j = 0; j < dotsWrap.children.length; j++) {
+        dotsWrap.children[j].classList.toggle("active", j === pos);
       }
     }
-    for (var j = 0; j < dotsWrap.children.length; j++) {
-      dotsWrap.children[j].classList.toggle("active", j === pos);
+
+    function next() { pos = pos >= pages() - 1 ? 0 : pos + 1; render(); }
+    function prev() { pos = pos <= 0 ? pages() - 1 : pos - 1; render(); }
+    function start() { if (prefersReduced) return; stop(); timer = setInterval(next, 4500); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { start(); }
+
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); restart(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { prev(); restart(); });
+    if (slider) {
+      slider.addEventListener("mouseenter", stop);
+      slider.addEventListener("mouseleave", start);
     }
+    window.addEventListener("resize", render);
+    render();
+    start();
   }
-
-  function next() { pos = pos >= maxPos() ? 0 : pos + 1; render(); }
-  function prev() { pos = pos <= 0 ? maxPos() : pos - 1; render(); }
-  function start() { if (prefersReduced) return; stop(); timer = setInterval(next, 4500); }
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  function restart() { start(); }
-
-  nextBtn.addEventListener("click", function () { next(); restart(); });
-  prevBtn.addEventListener("click", function () { prev(); restart(); });
-
-  var slider = document.getElementById("gal-slider");
-  slider.addEventListener("mouseenter", stop);
-  slider.addEventListener("mouseleave", start);
-  window.addEventListener("resize", render);
-
-  render();
-  start();
+  var carousels = document.querySelectorAll(".gal-carousel");
+  for (var k = 0; k < carousels.length; k++) setup(carousels[k]);
 })();
 </script>
 
@@ -1433,25 +1410,30 @@
     <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20agendar%20una%20reunión%20para%20experiencias%20corporativas" target="_blank" class="btn-white">Agendar Reunión</a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQR73yZ3YiT2e2jC7tGwc4FWWMCqtgv7WVmMKTwoNC7M7NrQ/viewform?usp=dialog" target="_blank" class="btn-orange-solid">Cotización Rápida</a>
   </div>
-</section>
 
-<!-- TEAM BUILDING -->
-<section id="team-building">
-  <div class="section-header">
-    <span class="section-tag" style="color:#2f6b3a">Experiencias para equipos</span>
-    <h2 class="section-title">TEAM BUILDING</h2>
-  </div>
-  <p style="text-align:center;max-width:640px;margin:0 auto 40px;color:#4b5548;font-size:1rem;line-height:1.6">Momentos reales de equipos que fortalecieron su confianza y colaboración en la montaña.</p>
-  <div class="tb-grid">
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-01.jpg" alt="Team Building Hiking Mountain MX 01" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-02.jpg" alt="Team Building Hiking Mountain MX 02" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-03.jpg" alt="Team Building Hiking Mountain MX 03" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-04.jpg" alt="Team Building Hiking Mountain MX 04" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-05.jpg" alt="Team Building Hiking Mountain MX 05" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-06.jpg" alt="Team Building Hiking Mountain MX 06" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-07.jpg" alt="Team Building Hiking Mountain MX 07" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-08.jpg" alt="Team Building Hiking Mountain MX 08" loading="lazy"></figure>
-      <figure class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-09.jpg" alt="Team Building Hiking Mountain MX 09" loading="lazy"></figure>
+  <div class="corp-gallery">
+    <h3 class="corp-gallery-title">EQUIPOS EN LA MONTAÑA</h3>
+    <p class="corp-gallery-sub">Momentos reales de equipos que fortalecieron su confianza y colaboración con nosotros.</p>
+    <div class="gal-carousel">
+      <div class="gal-slider">
+        <button class="gal-arrow gal-prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="gal-viewport">
+          <div class="gal-track">
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-01.jpg" alt="Team Building Hiking Mountain MX 01" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-02.jpg" alt="Team Building Hiking Mountain MX 02" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-03.jpg" alt="Team Building Hiking Mountain MX 03" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-04.jpg" alt="Team Building Hiking Mountain MX 04" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-05.jpg" alt="Team Building Hiking Mountain MX 05" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-06.jpg" alt="Team Building Hiking Mountain MX 06" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-07.jpg" alt="Team Building Hiking Mountain MX 07" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-08.jpg" alt="Team Building Hiking Mountain MX 08" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-09.jpg" alt="Team Building Hiking Mountain MX 09" loading="lazy"></figure>
+          </div>
+        </div>
+        <button class="gal-arrow gal-next" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="gal-dots"></div>
+    </div>
   </div>
 </section>
 
