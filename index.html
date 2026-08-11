@@ -693,6 +693,24 @@
 
   .btn-orange-solid:hover { background: #c4491a; transform: translateY(-2px); }
 
+  /* ── GALERÍA EQUIPOS (marquee) ── */
+  .tb-marquee {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+  .tb-track { display: flex; align-items: center; gap: 14px; width: max-content; animation: tbMarquee 34s linear infinite; }
+  @keyframes tbMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tb-marquee:hover .tb-track { animation-play-state: paused; }
+  .tb-item { flex-shrink: 0; width: 220px; height: 150px; border-radius: 14px; overflow: hidden; }
+  .tb-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 700px) { .tb-item { width: 160px; height: 110px; } }
+  @media (prefers-reduced-motion: reduce) { .tb-track { animation: none; } .tb-marquee { overflow-x: auto; } }
+
   /* ── NOSOTROS ── */
   #nosotros {
     position: relative;
@@ -1245,9 +1263,29 @@
 <section id="corporativo" style="text-align:center;padding:110px 40px">
   <span class="section-tag" style="color:var(--orange);display:block;margin-bottom:12px">Para empresas</span>
   <h2 class="section-title">EXPERIENCIAS EN LA NATURALEZA<br>PARA FORTALECER EQUIPOS DE TRABAJO</h2>
-  <p class="corp-sub" style="margin:20px auto 40px">Team building, wellness, onboarding y liderazgo a través de experiencias inmersivas en la montaña.</p>
+  <p class="corp-sub" style="margin:20px auto 32px">Team building, wellness, onboarding y liderazgo a través de experiencias inmersivas en la montaña.</p>
+  <div class="tb-marquee">
+    <div class="tb-track" id="tb-track">
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-01.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-02.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-03.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-04.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-05.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-06.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-07.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-08.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+      <div class="tb-item"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/team-building-09.jpg" alt="Team Building Hiking Mountain MX" loading="lazy"></div>
+    </div>
+  </div>
   <a href="empresas.html" class="btn-white" style="font-size:1.1rem;padding:22px 52px">Conoce las Experiencias Corporativas →</a>
 </section>
+
+<script>
+  (function () {
+    var track = document.getElementById('tb-track');
+    if (track) track.innerHTML += track.innerHTML;
+  })();
+</script>
 
 <!-- NOSOTROS + SEGURIDAD -->
 <section id="nosotros">
