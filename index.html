@@ -693,6 +693,79 @@
 
   .btn-orange-solid:hover { background: #c4491a; transform: translateY(-2px); }
 
+  /* ── GALERÍA SLIDER ── */
+  .gal-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .gal-viewport { overflow: hidden; flex: 1; border-radius: 12px; }
+  .gal-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+  }
+  .gal-slide {
+    position: relative;
+    flex: 0 0 calc((100% - 24px) / 3);
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .gal-slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .gal-slide figcaption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 18px 12px 9px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0,0,0,0.72));
+    letter-spacing: 0.02em;
+  }
+  .gal-arrow {
+    width: 42px; height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.92);
+    color: var(--dark);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .gal-arrow:hover { background: var(--green); color: #fff; }
+  .gal-dots {
+    display: flex; justify-content: center; gap: 7px;
+    margin-top: 20px;
+  }
+  .gal-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    border: none; padding: 0; cursor: pointer;
+    background: rgba(255,255,255,0.28);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .gal-dot.active { background: var(--green); transform: scale(1.3); }
+  @media (max-width: 860px) {
+    .gal-slide { flex: 0 0 calc((100% - 12px) / 2); }
+    .gal-slide img { height: 190px; }
+  }
+  @media (max-width: 560px) {
+    .gal-slide { flex: 0 0 100%; }
+    .gal-slide img { height: 240px; }
+    .gal-arrow { width: 36px; height: 36px; }
+  }
+
+
   /* ── GALERÍA EQUIPOS (marquee) ── */
   .tb-marquee {
     position: relative;
@@ -1145,63 +1218,117 @@
     <span class="section-tag" style="color:#86efac">Nuestras experiencias</span>
     <h2 class="section-title" style="color:white">GALERÍA</h2>
   </div>
-  <div style="columns:3;column-gap:12px;max-width:1200px;margin:0 auto">
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila (Circuito)" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+<div class="gal-carousel">
+  <div class="gal-slider" id="gal-slider">
+      <button class="gal-arrow gal-prev" id="gal-prev" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="gal-viewport">
+        <div class="gal-track" id="gal-track">
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/pico_aguila.jpeg" alt="Pico del Águila (Circuito)" loading="lazy"><figcaption>Pico del Águila (Circuito)</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer en los Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Amanecer en los Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero" loading="lazy"><figcaption>Mi Primer Sendero</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" loading="lazy"><figcaption>Cascada de Nexpayantla</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" loading="lazy"><figcaption>Xitle Cráter</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/chichinautzin.jpeg" alt="Chichinautzin" loading="lazy"><figcaption>Chichinautzin</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cruz_rosas.jpeg" alt="Cruz de Rosas" loading="lazy"><figcaption>Cruz de Rosas</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" loading="lazy"><figcaption>Travesía Telapón – Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cofre_perote.jpeg" alt="Cofre de Perote" loading="lazy"><figcaption>Cofre de Perote</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/campamento_paricutin.jpeg" alt="Campamento Paricutín" loading="lazy"><figcaption>Campamento Paricutín</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" loading="lazy"><figcaption>Presa Iturbide</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos, Faldas del Popocatépetl" loading="lazy"><figcaption>Recolección de Hongos, Faldas del Popocatépetl</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" loading="lazy"><figcaption>Desierto de los Leones</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" loading="lazy"><figcaption>Monte Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas de Lava" loading="lazy"><figcaption>Cuevas de Lava</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" loading="lazy"><figcaption>Volcanes Enanos</figcaption></figure>
+        <figure class="gal-slide"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/malinche.jpeg" alt="La Malinche (Cima)" loading="lazy"><figcaption>La Malinche (Cima)</figcaption></figure>
+        </div>
+      </div>
+      <button class="gal-arrow gal-next" id="gal-next" aria-label="Siguiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Amanecer en los Senderos del Iztaccíhuatl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/xitle_crater.jpeg" alt="Xitle Cráter" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/chichinautzin.jpeg" alt="Chichinautzin" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cruz_rosas.jpeg" alt="Cruz de Rosas" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cofre_perote.jpeg" alt="Cofre de Perote" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/campamento_paricutin.jpeg" alt="Campamento Paricutín" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/presa_iturbide.jpeg" alt="Presa Iturbide" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/recoleccion_hongos.jpeg" alt="Recolección de Hongos, Faldas del Popocatépetl" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/desierto_leones.jpeg" alt="Desierto de los Leones" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/monte_tlaloc.jpeg" alt="Monte Tláloc" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/cuevas_xitle.jpeg" alt="Cuevas de Lava" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/volcanes_enanos.jpeg" alt="Volcanes Enanos" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="break-inside:avoid;margin-bottom:8px;border-radius:10px;overflow:hidden">
-      <img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/malinche.jpeg" alt="La Malinche (Cima)" style="width:100%;height:160px;object-fit:cover;display:block;border-radius:10px;transition:transform 0.3s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
+    <div class="gal-dots" id="gal-dots"></div>
   </div>
+
 </section>
+
+<script>
+(function () {
+  "use strict";
+  function perView() {
+    if (window.matchMedia("(max-width:560px)").matches) return 1;
+    if (window.matchMedia("(max-width:860px)").matches) return 2;
+    return 3;
+  }
+  function setup(root) {
+    var track = root.querySelector(".gal-track");
+    var dotsWrap = root.querySelector(".gal-dots");
+    var prevBtn = root.querySelector(".gal-prev");
+    var nextBtn = root.querySelector(".gal-next");
+    var slider = root.querySelector(".gal-slider");
+    if (!track || !dotsWrap) return;
+    var slides = track.querySelectorAll(".gal-slide");
+    var total = slides.length;
+    if (!total) return;
+    var pos = 0, timer = null;
+    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function pages() { return Math.max(1, Math.ceil(total / perView())); }
+
+    function render() {
+      var pv = perView();
+      var np = pages();
+      if (pos > np - 1) pos = np - 1;
+      var slideW = slides[0].getBoundingClientRect().width;
+      var gap = 12;
+      var startIndex = pos * pv;
+      var maxIndex = Math.max(0, total - pv);
+      if (startIndex > maxIndex) startIndex = maxIndex;
+      track.style.transform = "translateX(-" + (startIndex * (slideW + gap)) + "px)";
+      if (dotsWrap.children.length !== np) {
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < np; i++) {
+          var b = document.createElement("button");
+          b.className = "gal-dot";
+          b.setAttribute("aria-label", "Ir al grupo " + (i + 1));
+          (function (idx) { b.addEventListener("click", function () { pos = idx; render(); restart(); }); })(i);
+          dotsWrap.appendChild(b);
+        }
+      }
+      for (var j = 0; j < dotsWrap.children.length; j++) {
+        dotsWrap.children[j].classList.toggle("active", j === pos);
+      }
+    }
+
+    function next() { pos = pos >= pages() - 1 ? 0 : pos + 1; render(); }
+    function prev() { pos = pos <= 0 ? pages() - 1 : pos - 1; render(); }
+    function start() { if (prefersReduced) return; stop(); timer = setInterval(next, 4500); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { start(); }
+
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); restart(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { prev(); restart(); });
+    if (slider) {
+      slider.addEventListener("mouseenter", stop);
+      slider.addEventListener("mouseleave", start);
+    }
+    window.addEventListener("resize", render);
+    render();
+    start();
+  }
+  function initAll() {
+    var carousels = document.querySelectorAll(".gal-carousel");
+    for (var k = 0; k < carousels.length; k++) setup(carousels[k]);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAll);
+  } else {
+    initAll();
+  }
+})();
+</script>
 
 <!-- HIKES PROGRAMADOS -->
 <section id="hikes">
