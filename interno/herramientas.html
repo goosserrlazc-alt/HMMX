@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas internas · Hiking Mountain MX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a5c2a;
+    --green-light: #2d8a42;
+    --orange: #e85d20;
+    --orange-light: #f97316;
+    --cream: #ffffff;
+    --dark: #111410;
+    --stone: #8a8575;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  #topo-canvas { position: fixed; inset: 0; z-index: 0; opacity: 0.07; pointer-events: none; }
+
+  nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,92,42,0.15);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.06em;
+    color: var(--green);
+    text-decoration: none;
+  }
+  .nav-logo img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
+  @media (max-width: 640px) { .nav-logo span { display: none; } }
+  .nav-back {
+    font-size: 0.85rem;
+    color: var(--stone);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-back:hover { color: var(--green); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    line-height: 0.95;
+    margin-bottom: 16px;
+  }
+  h1 span { color: var(--green); }
+  .sub {
+    color: var(--stone);
+    max-width: 480px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 720px;
+  }
+  @media (max-width: 640px) { .tools { grid-template-columns: 1fr; } }
+
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 44px 28px;
+    border-radius: 16px;
+    text-decoration: none;
+    background: var(--dark);
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(17,20,16,0.12);
+  }
+  .tool-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(17,20,16,0.22); }
+  .tool-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+  .tool-card.cotizador .tool-icon { background: rgba(45,138,66,0.22); color: var(--green-light); }
+  .tool-card.combustible .tool-icon { background: rgba(249,115,22,0.2); color: var(--orange-light); }
+  .tool-card h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0.04em;
+  }
+  .tool-card p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .tool-card .go {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .tool-card.cotizador .go { color: var(--green-light); }
+  .tool-card.combustible .go { color: var(--orange-light); }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 28px 40px;
+    text-align: center;
+    color: var(--stone);
+    font-size: 0.78rem;
+    border-top: 1px solid rgba(138,133,117,0.2);
+  }
+</style>
+</head>
+<body>
+
+<canvas id="topo-canvas"></canvas>
+
+<nav>
+  <a href="../index.html" class="nav-logo"><img src="https://raw.githubusercontent.com/goosserrlazc-alt/HMMX/main/images/logo-hmmx.png" alt="Logo HMMX"><span>HIKING MOUNTAIN MX</span></a>
+  <a href="../index.html" class="nav-back">← Volver al sitio</a>
+</nav>
+
+<main>
+  <p class="eyebrow">Acceso restringido · Equipo HMMX</p>
+  <h1>HERRAMIENTAS<br><span>INTERNAS</span></h1>
+  <p class="sub">Elige la herramienta que necesitas usar.</p>
+
+  <div class="tools">
+    <a href="cotizador-hmmx_5.html" class="tool-card cotizador">
+      <div class="tool-icon">📋</div>
+      <h2>Cotizador</h2>
+      <p>Arma cotizaciones de eventos y expediciones corporativas.</p>
+      <span class="go">Abrir →</span>
+    </a>
+    <a href="combustible-hmmx_2.html" class="tool-card combustible">
+      <div class="tool-icon">⛽</div>
+      <h2>Calculadora de combustible</h2>
+      <p>Registra cargas de gasolina y controla el gasto por vehículo.</p>
+      <span class="go">Abrir →</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  Hiking Mountain MX · Uso interno exclusivo del equipo
+</footer>
+
+<script>
+const canvas = document.getElementById('topo-canvas');
+const ctx = canvas.getContext('2d');
+let width, height, cols, rows;
+const res = 18;
+let field = new Float32Array(0);
+let thresholds = [];
+for(let i = -3.0; i <= 3.0; i += 0.12) thresholds.push(i);
+
+function resize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+  cols = Math.ceil(width / res) + 1;
+  rows = Math.ceil(height / res) + 1;
+  field = new Float32Array(cols * rows);
+}
+window.addEventListener('resize', resize);
+
+function calcZ(x, y, t) {
+  let qx = x * 0.003, qy = y * 0.003;
+  let wX = Math.sin(qy * 0.8 + t * 0.3) * 1.5 + Math.cos(qx * 1.2 - t * 0.1) * 0.5;
+  let wY = Math.cos(qx * 0.9 - t * 0.2) * 1.5 + Math.sin(qy * 1.1 + t * 0.15) * 0.5;
+  qx += wX * 0.5; qy += wY * 0.5;
+  let z = 0, scale = 1.0, amp = 1.0, maxV = 0;
+  const rC = 0.766, rS = 0.642;
+  for(let i = 0; i < 4; i++) {
+    z += (Math.sin(qx * scale + t * 0.4) + Math.cos(qy * scale - t * 0.4)) * amp;
+    maxV += amp * 2;
+    let tx = qx * rC - qy * rS, ty = qx * rS + qy * rC;
+    qx = tx; qy = ty;
+    scale *= 1.87; amp *= 0.48;
+  }
+  return (z / maxV) * 6.0;
+}
+
+function interp(v1, v2, t, p1, p2) {
+  if(v1 === v2) return p1 + (p2-p1)*0.5;
+  return p1 + (p2-p1)*((t-v1)/(v2-v1));
+}
+
+function animate() {
+  ctx.clearRect(0, 0, width, height);
+  const t = Date.now() * 0.0004;
+  for(let i = 0; i < cols; i++) for(let j = 0; j < rows; j++) {
+    field[i + j*cols] = calcZ(i*res, j*res, t);
+  }
+  for(let k = 0; k < thresholds.length; k++) {
+    const th = thresholds[k];
+    ctx.beginPath();
+    ctx.lineWidth = k % 5 === 0 ? 1.6 : 0.6;
+    ctx.strokeStyle = k % 5 === 0 ? 'rgba(26,92,42,0.9)' : 'rgba(26,92,42,0.4)';
+    for(let i = 0; i < cols-1; i++) for(let j = 0; j < rows-1; j++) {
+      const a = field[i+j*cols], b = field[i+1+j*cols], c = field[i+1+(j+1)*cols], d = field[i+(j+1)*cols];
+      if(th < Math.min(a,b,c,d) || th > Math.max(a,b,c,d)) continue;
+      const x = i*res, y = j*res;
+      let s = 0;
+      if(a>=th) s|=8; if(b>=th) s|=4; if(c>=th) s|=2; if(d>=th) s|=1;
+      const tX=interp(a,b,th,x,x+res), tY=y;
+      const rX=x+res, rY=interp(b,c,th,y,y+res);
+      const bX=interp(d,c,th,x,x+res), bY=y+res;
+      const lX=x, lY=interp(a,d,th,y,y+res);
+      const L=(x1,y1,x2,y2)=>{ctx.moveTo(x1,y1);ctx.lineTo(x2,y2)};
+      switch(s){
+        case 1:L(lX,lY,bX,bY);break;case 2:L(bX,bY,rX,rY);break;case 3:L(lX,lY,rX,rY);break;
+        case 4:L(tX,tY,rX,rY);break;case 5:L(lX,lY,tX,tY);L(bX,bY,rX,rY);break;
+        case 6:L(tX,tY,bX,bY);break;case 7:L(lX,lY,tX,tY);break;case 8:L(lX,lY,tX,tY);break;
+        case 9:L(tX,tY,bX,bY);break;case 10:L(lX,lY,bX,bY);L(tX,tY,rX,rY);break;
+        case 11:L(tX,tY,rX,rY);break;case 12:L(lX,lY,rX,rY);break;
+        case 13:L(bX,bY,rX,rY);break;case 14:L(lX,lY,bX,bY);break;
+      }
+    }
+    ctx.stroke();
+  }
+  requestAnimationFrame(animate);
+}
+
+resize();
+setTimeout(()=>animate(), 100);
+</script>
+
+</body>
+</html>
