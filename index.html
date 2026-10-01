@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hiking Mountain MX | ¡Atrévete a intentarlo!</title>
+<meta name="description" content="Hiking y senderismo en CDMX y Estado de México. Salidas grupales, hikes privados y experiencias de team building corporativo en la montaña, con guías certificados.">
+<link rel="canonical" href="https://hikingmountainmx.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hiking Mountain MX">
+<meta property="og:title" content="Hiking Mountain MX | ¡Atrévete a intentarlo!">
+<meta property="og:description" content="Hiking y senderismo en CDMX y Estado de México. Salidas grupales, hikes privados y experiencias de team building corporativo en la montaña.">
+<meta property="og:image" content="/images/logo-hmmx.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=20260930b">
+</head>
+<body>
+
+<!-- Topographic animated canvas -->
+<canvas id="topo-canvas"></canvas>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/525516995143" target="_blank" class="wa-float" title="Contactar por WhatsApp">
+  <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo"><img src="images/logo-hmmx.png" alt="Logo Hiking Mountain MX"><span class="nav-logo-text">HIKING MOUNTAIN MX</span></a>
+  <ul class="nav-links">
+    <li><a href="#hikes">Hikes</a></li>
+    <li><a href="#calendario">Calendario</a></li>
+    <li><a href="#privados">Privados</a></li>
+    <li><a href="#corporativo">Empresas</a></li>
+    <li><a href="kids.html" class="nav-kids" aria-label="HMMX Kids"><img src="images/kids-wordmark.png" alt="Kids" width="54" height="30"></a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#recursos">Recursos</a></li>
+  </ul>
+  <a href="https://wa.me/525516995143" target="_blank" class="btn-nav">Reservar →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <img src="images/logo-hmmx.png" alt="Hiking Mountain MX" class="hero-crest">
+  <p class="hero-eyebrow">CDMX / ESTADO DE MÉXICO</p>
+  <h1 class="hero-title">
+    ATRÉVETE<br>A<br><span>INTENTARLO</span>
+  </h1>
+  <p class="hero-sub">Conectamos personas y equipos con la montaña a través de rutas diseñadas para transformar cuerpo, mente y equipo.</p>
+  <div class="hero-ctas">
+    <a href="#hikes" class="btn-primary">Ver Próximos Hikes</a>
+    <a href="#corporativo" class="btn-secondary">Experiencias Corporativas</a>
+  </div>
+  
+</section>
+
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <div class="section-header">
+    <h2 class="section-title">GALERÍA</h2>
+  </div>
+  <div class="gal-carousel">
+  <div class="gal-slider" id="gal-slider">
+      <button class="gal-arrow gal-prev" id="gal-prev" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="gal-viewport">
+        <div class="gal-track" id="gal-track">
+        <figure class="gal-slide"><img src="images/pico_aguila.jpeg" alt="Pico del Águila (Circuito)" loading="lazy"><figcaption>Pico del Águila (Circuito)</figcaption></figure>
+        <figure class="gal-slide"><img src="images/senderos_iztaccihuatl.jpeg" alt="Amanecer en los Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Amanecer en los Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="images/mi_primer_sendero.jpeg" alt="Mi Primer Sendero" loading="lazy"><figcaption>Mi Primer Sendero</figcaption></figure>
+        <figure class="gal-slide"><img src="images/cascada_nexpayantla.jpeg" alt="Cascada de Nexpayantla" loading="lazy"><figcaption>Cascada de Nexpayantla</figcaption></figure>
+        <figure class="gal-slide"><img src="images/senderos_iztaccihuatl.jpeg" alt="Senderos del Iztaccíhuatl" loading="lazy"><figcaption>Senderos del Iztaccíhuatl</figcaption></figure>
+        <figure class="gal-slide"><img src="images/xitle_crater.jpeg" alt="Xitle Cráter" loading="lazy"><figcaption>Xitle Cráter</figcaption></figure>
+        <figure class="gal-slide"><img src="images/chichinautzin.jpeg" alt="Chichinautzin" loading="lazy"><figcaption>Chichinautzin</figcaption></figure>
+        <figure class="gal-slide"><img src="images/cruz_rosas.jpeg" alt="Cruz de Rosas" loading="lazy"><figcaption>Cruz de Rosas</figcaption></figure>
+        <figure class="gal-slide"><img src="images/monte_telapon.jpeg" alt="Travesía Telapón – Tláloc" loading="lazy"><figcaption>Travesía Telapón – Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="images/cofre_perote.jpeg" alt="Cofre de Perote" loading="lazy"><figcaption>Cofre de Perote</figcaption></figure>
+        <figure class="gal-slide"><img src="images/campamento_paricutin.jpeg" alt="Campamento Paricutín" loading="lazy"><figcaption>Campamento Paricutín</figcaption></figure>
+        <figure class="gal-slide"><img src="images/presa_iturbide.jpeg" alt="Presa Iturbide" loading="lazy"><figcaption>Presa Iturbide</figcaption></figure>
+        <figure class="gal-slide"><img src="images/recoleccion_hongos.jpeg" alt="Recolección de Hongos, Faldas del Popocatépetl" loading="lazy"><figcaption>Recolección de Hongos, Faldas del Popocatépetl</figcaption></figure>
+        <figure class="gal-slide"><img src="images/desierto_leones.jpeg" alt="Desierto de los Leones" loading="lazy"><figcaption>Desierto de los Leones</figcaption></figure>
+        <figure class="gal-slide"><img src="images/monte_tlaloc.jpeg" alt="Monte Tláloc" loading="lazy"><figcaption>Monte Tláloc</figcaption></figure>
+        <figure class="gal-slide"><img src="images/cuevas_xitle.jpeg" alt="Cuevas de Lava" loading="lazy"><figcaption>Cuevas de Lava</figcaption></figure>
+        <figure class="gal-slide"><img src="images/volcanes_enanos.jpeg" alt="Volcanes Enanos" loading="lazy"><figcaption>Volcanes Enanos</figcaption></figure>
+        <figure class="gal-slide"><img src="images/malinche.jpeg" alt="La Malinche (Cima)" loading="lazy"><figcaption>La Malinche (Cima)</figcaption></figure>
+        </div>
+      </div>
+      <button class="gal-arrow gal-next" id="gal-next" aria-label="Siguiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+    <div class="gal-dots" id="gal-dots"></div>
+  </div>
+</section>
+
+<script src="assets/js/gallery-carousel.js"></script>
+
+<!-- HIKES PROGRAMADOS -->
+<section id="hikes">
+  <div class="section-header">
+    <span class="section-tag">Salidas programadas</span>
+    <h2 class="section-title">PRÓXIMOS HIKES</h2>
+  </div>
+
+  <!-- Month Tabs -->
+  <div class="month-tabs" id="month-tabs-top"></div>
+
+  <!-- Filter by difficulty / pet friendly -->
+  <div class="filters">
+    <button class="filter-btn active" data-filter-type="diff" data-filter-value="all">Todos</button>
+    <button class="filter-btn" data-filter-type="diff" data-filter-value="principiante">Principiante</button>
+    <button class="filter-btn" data-filter-type="diff" data-filter-value="intermedio">Intermedio</button>
+    <button class="filter-btn" data-filter-type="diff" data-filter-value="avanzado">Avanzado</button>
+    <button class="filter-btn filter-btn-pet" data-filter-type="pet" data-filter-value="si">🐾 Pet Friendly</button>
+  </div>
+
+  <div class="hikes-grid" id="hikes-grid"></div><!-- hikes-grid -->
+
+  <div class="month-tabs" id="month-tabs-bottom"></div>
+</section>
+
+<!-- CALENDARIO VISUAL -->
+<section id="calendario">
+  <div class="section-header">
+    <h2 class="section-title">CALENDARIO</h2>
+  </div>
+  <div class="cal-grid" id="cal-grid"></div>
+  <div class="cal-legend">
+    <span class="cal-legend-item"><span class="cal-legend-dot dot-principiante"></span>Principiante</span>
+    <span class="cal-legend-item"><span class="cal-legend-dot dot-intermedio"></span>Intermedio</span>
+    <span class="cal-legend-item"><span class="cal-legend-dot dot-avanzado"></span>Avanzado</span>
+  </div>
+</section>
+
+<!-- HIKES PRIVADOS -->
+<section id="privados">
+  <div class="section-header">
+    <h2 class="section-title">HIKES PRIVADOS</h2>
+  </div>
+  <div class="privados-grid">
+    <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20organizar%20un%20hike%20privado%20para%20cumpleaños.%20¿Me%20pueden%20dar%20más%20información%20y%20costos?" target="_blank" class="privado-card"><div class="privado-icon">🎂</div><div class="privado-name">Cumpleaños</div></a>
+    <a href="https://wa.me/525516995143?text=Hola!%20Me%20interesa%20un%20hike%20privado%20para%20pareja.%20¿Qué%20rutas%20románticas%20o%20especiales%20tienen%20disponibles?" target="_blank" class="privado-card"><div class="privado-icon">💑</div><div class="privado-name">Parejas</div></a>
+    <a href="https://wa.me/525516995143?text=Hola!%20Queremos%20organizar%20un%20hike%20privado%20para%20un%20grupo.%20¿Cuántas%20personas%20mínimas%20se%20necesitan%20y%20cuáles%20son%20los%20costos?" target="_blank" class="privado-card"><div class="privado-icon">👥</div><div class="privado-name">Grupos</div></a>
+    <a href="https://wa.me/525516995143?text=Hola!%20Nos%20interesa%20una%20experiencia%20privada%20de%20hike%20para%20nuestra%20empresa.%20¿Tienen%20opciones%20de%20team%20building%20o%20actividades%20corporativas?" target="_blank" class="privado-card"><div class="privado-icon">🏢</div><div class="privado-name">Empresas</div></a>
+    <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20organizar%20una%20salida%20de%20hike%20para%20una%20escuela%20o%20grupo%20de%20jóvenes.%20¿Tienen%20rutas%20apropiadas%20y%20precios%20especiales?" target="_blank" class="privado-card"><div class="privado-icon">🎒</div><div class="privado-name">Escuelas</div></a>
+  </div>
+  <div class="privado-ctas">
+    <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20agendar%20un%20hike%20privado" target="_blank" class="btn-primary">Agenda una llamada →</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQR73yZ3YiT2e2jC7tGwc4FWWMCqtgv7WVmMKTwoNC7M7NrQ/viewform?usp=dialog" target="_blank" class="btn-secondary">Cotización Rápida</a>
+  </div>
+</section>
+
+<!-- CORPORATIVO -->
+<section id="corporativo">
+  <span class="section-tag">Para empresas</span>
+  <h2 class="section-title">EXPERIENCIAS EN LA NATURALEZA<br>PARA FORTALECER EQUIPOS DE TRABAJO</h2>
+  <p class="corp-sub">Transformamos el estrés laboral en cohesión y propósito a través de experiencias inmersivas en la montaña. Desde onboardings hasta retiros de liderazgo.</p>
+
+  <div class="corp-ctas">
+    <a href="https://wa.me/525516995143?text=Hola!%20Quiero%20agendar%20una%20reunión%20para%20experiencias%20corporativas" target="_blank" class="btn-white">Agendar Reunión</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQR73yZ3YiT2e2jC7tGwc4FWWMCqtgv7WVmMKTwoNC7M7NrQ/viewform?usp=dialog" target="_blank" class="btn-orange-solid">Cotización Rápida</a>
+    <a href="empresas.html" class="btn-ghost-outline">Ver más para empresas →</a>
+  </div>
+
+  <div class="corp-gallery">
+    <h3 class="corp-gallery-title">EQUIPOS EN LA MONTAÑA</h3>
+    <p class="corp-gallery-sub">Momentos reales de equipos que fortalecieron su confianza y colaboración con nosotros.</p>
+    <div class="gal-carousel">
+      <div class="gal-slider">
+        <button class="gal-arrow gal-prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="gal-viewport">
+          <div class="gal-track">
+          <figure class="gal-slide"><img src="images/team-building-01.jpg" alt="Team Building Hiking Mountain MX 01" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-02.jpg" alt="Team Building Hiking Mountain MX 02" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-03.jpg" alt="Team Building Hiking Mountain MX 03" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-04.jpg" alt="Team Building Hiking Mountain MX 04" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-05.jpg" alt="Team Building Hiking Mountain MX 05" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-06.jpg" alt="Team Building Hiking Mountain MX 06" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-07.jpg" alt="Team Building Hiking Mountain MX 07" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-08.jpg" alt="Team Building Hiking Mountain MX 08" loading="lazy"></figure>
+          <figure class="gal-slide"><img src="images/team-building-09.jpg" alt="Team Building Hiking Mountain MX 09" loading="lazy"></figure>
+          </div>
+        </div>
+        <button class="gal-arrow gal-next" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="gal-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS + SEGURIDAD -->
+<section id="nosotros">
+  <div>
+    <h2 class="nosotros-title">HIKING<br>MOUNTAIN<br>MX</h2>
+    <p class="nosotros-text">Somos una empresa mexicana dedicada a conectar personas, equipos y comunidades con la montaña. Organizamos experiencias de senderismo seguras, memorables y transformadoras en los volcanes y bosques del centro de México.</p>
+    <p class="nosotros-text">Con guías certificados, protocolos de seguridad y una comunidad activa, cada salida es diseñada para que vuelvas diferente a como llegaste.</p>
+    <div class="nosotros-badge-wrap">
+      <img src="images/emblema-hmmx.jpg" alt="Insignia Hiking Mountain MX" class="nosotros-badge">
+    </div>
+    <div class="nosotros-links">
+      <a href="https://www.instagram.com/hiking_mountain_mx" target="_blank" class="link-pill">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank" class="link-pill">
+        ⭐ TripAdvisor
+      </a>
+      <a href="https://www.tiktok.com/@hiking_mountain_mx" target="_blank" class="link-pill">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.75a4.85 4.85 0 01-1-.06z"/></svg>
+        TikTok
+      </a>
+      <a href="https://wa.me/525516995143" target="_blank" class="link-pill">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+  <div>
+    <h3 class="security-heading">CONTAMOS CON</h3>
+    <div class="security-grid">
+      <div class="sec-item">
+        <div class="sec-icon">🛡️</div>
+        <div class="sec-title">Protocolos de Seguridad</div>
+        <div class="sec-desc">Procedimientos estandarizados para cada tipo de ruta y condición.</div>
+      </div>
+      <div class="sec-item">
+        <div class="sec-icon">🚑</div>
+        <div class="sec-title">Primeros Auxilios</div>
+        <div class="sec-desc">Guías certificados en primeros auxilios y manejo de emergencias.</div>
+      </div>
+      <div class="sec-item">
+        <div class="sec-icon">🌤️</div>
+        <div class="sec-title">Monitoreo Climático</div>
+        <div class="sec-desc">Revisión de condiciones meteorológicas antes y durante cada hike.</div>
+      </div>
+      <div class="sec-item">
+        <div class="sec-icon">🗺️</div>
+        <div class="sec-title">Guías con Experiencia</div>
+        <div class="sec-desc">Años de experiencia en rutas de alta montaña en México.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section id="resenas">
+  <div class="section-header">
+    <span class="section-tag">Lo que dicen al bajar</span>
+    <h2 class="section-title">RESEÑAS</h2>
+  </div>
+
+  <div class="review-summary">
+    <span class="rs-score">5.0</span>
+    <span class="rs-stars">★★★★★</span>
+    <span class="rs-meta">Calificación en Google &amp; TripAdvisor</span>
+  </div>
+
+  <div class="review-track" id="review-track"></div>
+
+  <div class="review-controls">
+    <button class="review-arrow" id="review-prev" aria-label="Reseña anterior">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="review-dots" id="review-dots"></div>
+    <button class="review-arrow" id="review-next" aria-label="Siguiente reseña">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+
+  <div class="review-cta">
+    <a class="rc-google" href="https://g.page/r/CSFTl_RKK3G_EBI/review" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11v2h5.5c-.2 1.3-1.6 3.9-5.5 3.9-3.3 0-6-2.7-6-6s2.7-6 6-6c1.9 0 3.1.8 3.9 1.5l1.5-1.5C16.6 3.3 14.6 2.4 12 2.4 6.9 2.4 2.9 6.5 2.9 11.6S6.9 20.8 12 20.8c5.2 0 8.6-3.6 8.6-8.7 0-.6-.1-1-.1-1.5H12z"/></svg> Ver reseñas en Google</a>
+    <a class="rc-ta" href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank" rel="noopener">Ver en TripAdvisor</a>
+  </div>
+</section>
+
+<script src="assets/js/reviews-carousel.js"></script>
+
+<!-- RECURSOS -->
+<section id="recursos">
+  <div class="recursos-inner">
+    <div class="section-header">
+      <h2 class="section-title">RECURSOS</h2>
+    </div>
+    <div class="resources-grid">
+
+      <a href="https://drive.google.com/drive/folders/1mkirgGiIgxaMaHkirYR5r5s8lPlQwKIJ?usp=sharing" target="_blank" class="resource-card">
+        <span class="resource-icon">⛺</span>
+        <div>
+          <div class="resource-title">Campamentos</div>
+          <div class="resource-desc">Información de nuestros campamentos</div>
+        </div>
+      </a>
+
+      <a href="kids.html" class="resource-card">
+        <span class="resource-icon">👧</span>
+        <div>
+          <div class="resource-title">HMMX Kids</div>
+          <div class="resource-desc">Campamentos, cumpleaños y Mi Primer Sendero</div>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1EDdq0F1cfP-TRu8kde3cJ_DexTYloYL_/view?usp=sharing" target="_blank" class="resource-card">
+        <span class="resource-icon">📊</span>
+        <div>
+          <div class="resource-title">Niveles de Dificultad</div>
+          <div class="resource-desc">¿Cuál es el tuyo?</div>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1neDywrXqSPp2tzcPu4kfHYaFwRwgjuqb/view?usp=sharing" target="_blank" class="resource-card">
+        <span class="resource-icon">🎫</span>
+        <div>
+          <div class="resource-title">Pase Anual</div>
+          <div class="resource-desc">Acceso ilimitado todo el año</div>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1CwNixM8ki3i6nV7NRRutRxO7vOgfYZF5?usp=sharing" target="_blank" class="resource-card">
+        <span class="resource-icon">🎒</span>
+        <div>
+          <div class="resource-title">¿Qué Llevar?</div>
+          <div class="resource-desc">Preparación y entrenamiento</div>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1irhlDxaVtvGmONWYVoNXdlsxxmVEaO50/view?usp=sharing" target="_blank" class="resource-card">
+        <span class="resource-icon">📋</span>
+        <div>
+          <div class="resource-title">Reglamento</div>
+          <div class="resource-desc">Montaña · Deslinde · Privacidad · Cancelación</div>
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1stwzqEshkBh-qjZjK4_p4C-ubdbaGl-W/view?usp=drivesdk" target="_blank" class="resource-card">
+        <span class="resource-icon">🏢</span>
+        <div>
+          <div class="resource-title">Team Buildings</div>
+          <div class="resource-desc">Experiencias corporativas HMMX</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-brand">HIKING MOUNTAIN MX</p>
+  <p class="footer-location">CDMX · Estado de México · México</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/hiking_mountain_mx" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@hiking_mountain_mx" target="_blank">TikTok</a>
+    <a href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d27996630-Reviews-Hiking_Mountain_Mexico-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_blank">TripAdvisor</a>
+    <a href="https://wa.me/525516995143" target="_blank">WhatsApp</a>
+  </div>
+  <a href="interno/herramientas.html" title="Herramientas internas" class="footer-tools-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04,-0.3 0.06,-0.61 0.06,-0.94c0,-0.32 -0.02,-0.64 -0.07,-0.94l2.03,-1.58c0.18,-0.14 0.23,-0.41 0.12,-0.61l-1.92,-3.32c-0.12,-0.22 -0.37,-0.29 -0.59,-0.22l-2.39,0.96c-0.5,-0.38 -1.03,-0.7 -1.62,-0.94L14.4,2.81c-0.04,-0.24 -0.24,-0.41 -0.48,-0.41h-3.84c-0.24,0 -0.43,0.17 -0.47,0.41L9.25,5.35C8.66,5.59 8.12,5.92 7.63,6.29L5.24,5.33c-0.22,-0.08 -0.47,0 -0.59,0.22L2.74,8.87C2.62,9.08 2.66,9.34 2.86,9.48l2.03,1.58C4.84,11.36 4.8,11.69 4.8,12s0.02,0.64 0.07,0.94l-2.03,1.58c-0.18,0.14 -0.23,0.41 -0.12,0.61l1.92,3.32c0.12,0.22 0.37,0.29 0.59,0.22l2.39,-0.96c0.5,0.38 1.03,0.7 1.62,0.94l0.36,2.54c0.05,0.24 0.24,0.41 0.48,0.41h3.84c0.24,0 0.44,-0.17 0.47,-0.41l0.36,-2.54c0.59,-0.24 1.13,-0.56 1.62,-0.94l2.39,0.96c0.22,0.08 0.47,0 0.59,-0.22l1.92,-3.32c0.12,-0.22 0.07,-0.47 -0.12,-0.61L19.14,12.94zM12,15.6c-1.98,0 -3.6,-1.62 -3.6,-3.6s1.62,-3.6 3.6,-3.6s3.6,1.62 3.6,3.6S13.98,15.6 12,15.6z"/></svg></a>
+  <p>© 2026 Hiking Mountain MX. Todos los derechos reservados.</p>
+</footer>
+
+<!-- TOPOGRAPHIC CANVAS + INTERACTIVITY SCRIPTS -->
+<script src="assets/js/topo-canvas.js"></script>
+<script src="assets/js/hikes-data.js?v=20260930b"></script>
+
+<script src="assets/js/weather-widget.js"></script>
+
+
+
+<script src="assets/js/discount-hunter.js"></script>
+<!-- ===== Fin botón caza-descuento HMMX ===== -->
+</body>
+</html>
